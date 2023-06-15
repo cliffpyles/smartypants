@@ -3,6 +3,7 @@
 import os
 import platform
 import sys
+from pathlib import Path
 
 
 def create_directory(directory_path):
@@ -29,7 +30,9 @@ def create_symlink(source_file, link_name):
 
 
 def main():
-    cli_tool = "smarty_pants.py"  # Path to the CLI tool
+    cli_tool = (
+        Path(__file__).resolve(strict=False).parent / "./smarty_pants.py"
+    )  # Path to the CLI tool
     symlink_name_sp = os.path.expanduser("/usr/local/bin/sp")  # Symlink name for 'sp'
     symlink_name_smartypants = os.path.expanduser(
         "/usr/local/bin/smartypants"
