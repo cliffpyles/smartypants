@@ -38,7 +38,6 @@ def main():
         "~/.smarty_pants"
     )  # Configuration directory in user's home
 
-    # Step 1: Create symlinks to the CLI tool
     create_symlink(cli_tool, symlink_name_sp)
     create_symlink(cli_tool, symlink_name_smartypants)
 
