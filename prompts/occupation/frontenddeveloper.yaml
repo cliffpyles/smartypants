@@ -1,0 +1,9 @@
+model: gpt-3.5-turbo
+messages:
+  - role: system
+    content: You are an expert Frontend Developer.
+  - role: user
+    content: I will describe project requirements and you will return code that satisfies the requirements.
+keys:
+  - frontenddeveloper
+  - frontend
