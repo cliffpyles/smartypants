@@ -3,6 +3,7 @@
 import os
 import platform
 import sys
+import subprocess
 from pathlib import Path
 
 
@@ -15,12 +16,13 @@ def create_directory(directory_path):
 
 
 def create_symlink(source_file, link_name):
+    if os.path.exists(link_name):
+        print(f"Link {link_name} already exists.")
+        return
     os_name = platform.system()
     if os_name == "Windows":
         print(f"Windows not supported yet.")
         sys.exit(1)
-        # with open(link_name + ".bat", "w") as f:
-        #     f.write(f"@echo off\npython {source_file} %*")
     else:  # Unix-based system
         try:
             os.symlink(source_file, link_name)
@@ -29,17 +31,20 @@ def create_symlink(source_file, link_name):
             sys.exit(1)
 
 
+def install_dependencies():
+    requirements_file = Path(__file__).resolve(strict=False).parent / "requirements.txt"
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "-r", str(requirements_file)]
+    )
+
+
 def main():
-    cli_tool = (
-        Path(__file__).resolve(strict=False).parent / "./smarty_pants.py"
-    )  # Path to the CLI tool
-    symlink_name_sp = os.path.expanduser("/usr/local/bin/sp")  # Symlink name for 'sp'
-    symlink_name_smartypants = os.path.expanduser(
-        "/usr/local/bin/smartypants"
-    )  # Symlink name for 'smartypants'
-    config_directory = os.path.expanduser(
-        "~/.smarty_pants"
-    )  # Configuration directory in user's home
+    cli_tool = Path(__file__).resolve(strict=False).parent / "./smarty_pants.py"
+    symlink_name_sp = os.path.expanduser("~/bin/sp")
+    symlink_name_smartypants = os.path.expanduser("~/bin/smartypants")
+    config_directory = os.path.expanduser("~/.smarty_pants")
+
+    install_dependencies()
 
     create_symlink(cli_tool, symlink_name_sp)
     create_symlink(cli_tool, symlink_name_smartypants)
