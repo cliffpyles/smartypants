@@ -1,0 +1,78 @@
+name: SmartyPants
+description: A CLI tool for interacting with AI services
+binaries: [smartypants, sp]
+modules:
+  - name: core
+    commands:
+      - name: version
+        description: Displays current version
+  - name: plugins
+    commands:
+      - name: disable
+        description: Disables a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+      - name: enable
+        description: Enables a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+      - name: install
+        description: Installs a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+      - name: list
+        description: Lists all installed plugins
+      - name: uninstall
+        description: Uninstalls a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+      - name: update
+        description: Updates a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: false
+plugins:
+  - name: OpenAI
+    commands:
+      - name: ask
+        arguments: []
+        options: []
+      - name: chat
+        arguments: []
+        options: []
+      - name: delete
+        arguments: []
+        options: []
+      - name: draw
+        arguments: []
+        options: []
+      - name: edit
+        arguments: []
+        options: []
+      - name: fork
+        arguments: []
+        options: []
+      - name: list
+        arguments: []
+        options: []
+      - name: models
+        arguments: []
+        options: []
+      - name: prompts
+        arguments: []
+        options: []
+      - name: send
+        arguments: []
+        options: []
+      - name: show
+        arguments: []
+        options: []
