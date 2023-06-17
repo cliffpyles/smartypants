@@ -99,12 +99,24 @@ plugins:
         commands:
           - name: create
             description: Create a new prompt
+            arguments:
+              - name: prompt_name
+                description: Name of the prompt
+                type: String
           - name: delete
             description: Delete a prompt
+            arguments:
+              - name: prompt_name
+                description: Name of the prompt
+                type: String
           - name: list
             description: List available prompts
           - name: view
             description: View a prompt
+            arguments:
+              - name: prompt_name
+                description: Name of the prompt
+                type: String
       - name: send
         description: Send one or more messages to OpenAI
         arguments: []
@@ -113,16 +125,14 @@ plugins:
             description: File to include as message
             type: String
             format: filepath
-            required: false
             allow_mutiple: true
           - name: live
-            description: Show the response as it is received
+            description: Stream the response as it is received
             type: Boolean
             default: false
           - name: message
             description: Message to send
             type: String
-            required: false
             allow_mutiple: true
           - name: model
             description: Language model to use
@@ -138,6 +148,12 @@ plugins:
             description: Don't format the response
             type: Boolean
             default: false
-    schemas:
-      ChatResponse:
-        type: Object
+    examples:
+      - description: Create a chat
+        example: 'smartypants'
+      - description: Delete a chat
+      - description: Export a chat
+      - description: Fork a chat
+      - description: List a chat
+      - description: Open a chat
+      - description: View a chat
