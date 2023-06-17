@@ -9,13 +9,9 @@ installation_guide: |
 
   `brew install smartypants-cli`
 
-  or
-
   **NPM**
 
   `npm install -g smartypants-cli`
-
-  or
 
   **PIP**
 

@@ -22,13 +22,9 @@ _no requirements specified_
 
 `brew install smartypants-cli`
 
-or
-
 **NPM**
 
 `npm install -g smartypants-cli`
-
-or
 
 **PIP**
 
