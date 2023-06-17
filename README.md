@@ -42,7 +42,7 @@ _no requirements specified_
 ### Plugins
 
 
-Command: `disable` Disables a plugin
+`smartypants plugins disable` Disables a plugin
 
 #### Parameters
 
@@ -64,7 +64,7 @@ smartypants plugins disable my_plugin
 
 
 
-Command: `enable` Enables a plugin
+`smartypants plugins enable` Enables a plugin
 
 #### Parameters
 
@@ -86,7 +86,7 @@ smartypants plugins enable my_plugin
 
 
 
-Command: `install` Installs a plugin
+`smartypants plugins install` Installs a plugin
 
 #### Parameters
 
@@ -108,7 +108,7 @@ smartypants plugins install my_plugin
 
 
 
-Command: `list` Lists all installed plugins
+`smartypants plugins list` Lists all installed plugins
 
 #### Parameters
 
@@ -126,7 +126,7 @@ smartypants plugins list
 
 
 
-Command: `uninstall` Uninstalls a plugin
+`smartypants plugins uninstall` Uninstalls a plugin
 
 #### Parameters
 
@@ -148,7 +148,7 @@ smartypants plugins uninstall my_plugin
 
 
 
-Command: `update` Updates a plugin
+`smartypants plugins update` Updates a plugin
 
 #### Parameters
 
@@ -174,7 +174,7 @@ smartypants plugins update my_plugin
 ### Openai
 
 
-Command: `chat` An interactive session with OpenAI
+`smartypants openai chat` An interactive session with OpenAI
 
 #### Parameters
 
@@ -185,7 +185,7 @@ Command: `chat` An interactive session with OpenAI
 
 
 
-Command: `models` List available models
+`smartypants openai models` List available models
 
 #### Parameters
 
@@ -203,7 +203,7 @@ smartypants openai models
 
 
 
-Command: `prompts` Preconfigured prompt to use with chats
+`smartypants openai prompts` Preconfigured prompt to use with chats
 
 #### Parameters
 
@@ -214,7 +214,7 @@ Command: `prompts` Preconfigured prompt to use with chats
 
 
 
-Command: `send` Send one or more messages to OpenAI
+`smartypants openai send` Send one or more messages to OpenAI
 
 #### Parameters
 

@@ -30,7 +30,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 ### {{ plugin.name.capitalize() }}
 
 {% for command in plugin.commands %}
-Command: `{{ command.name }}` {{ command.description }}
+`{{binary_name}} {{plugin.name}} {{ command.name }}` {{ command.description }}
 
 #### Parameters
 
