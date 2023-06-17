@@ -51,18 +51,43 @@ plugins:
         commands:
           - name: create
             description: Create a new chat
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
           - name: delete
             description: Delete a chat
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
           - name: export
             description: Export a chat to a prompt
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
           - name: fork
             description: Create a copy of a chat
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
           - name: list
             description: List all chats
+            arguments: []
           - name: open
             description: Open a chat
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
           - name: view
             description: Show the chat
+            arguments:
+              - name: chat_name
+                description: Name of the chat
+                type: String
       - name: models
         description: List available models
         arguments: []
