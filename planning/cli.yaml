@@ -68,13 +68,18 @@ plugins:
         arguments: []
         options: []
       - name: prompts
+        description: Preconfigured prompt to use with chats
         arguments: []
         options: []
         commands:
           - name: create
+            description: Create a new prompt
           - name: delete
+            description: Delete a prompt
           - name: list
+            description: List available prompts
           - name: view
+            description: View a prompt
       - name: send
         description: Send one or more messages to OpenAI
         arguments: []
@@ -85,6 +90,10 @@ plugins:
             format: filepath
             required: false
             allow_mutiple: true
+          - name: live
+            description: Show the response as it is received
+            type: Boolean
+            default: false
           - name: message
             description: Message to send
             type: String
@@ -100,6 +109,10 @@ plugins:
               - gpt-3.5-turbo-0613
               - gpt-3.5-turbo-16k
               - gpt-4-0613
+          - name: raw
+            description: Don't format the response
+            type: Boolean
+            default: false
     schemas:
       ChatResponse:
         type: Object
