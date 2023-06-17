@@ -29,7 +29,7 @@ _no installation guide specified_
 ## Plugins
 
 
-### Plugins Plugin
+### Plugins
 
 
 Command: `disable` Disables a plugin
@@ -161,7 +161,7 @@ smartypants plugins update my_plugin
 
 
 
-### Openai Plugin
+### Openai
 
 
 Command: `chat` An interactive session with OpenAI
