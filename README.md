@@ -32,13 +32,9 @@ _no installation guide specified_
 ### Plugins Plugin
 
 
-#### Command: `disable`
+`disable` Disables a plugin
 
-##### Description 
-
-Disables a plugin
-
-##### Parameters
+#### Parameters
 
 
 
@@ -46,7 +42,7 @@ Disables a plugin
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -55,13 +51,9 @@ Disables a plugin
 
 
 
-#### Command: `enable`
+`enable` Enables a plugin
 
-##### Description 
-
-Enables a plugin
-
-##### Parameters
+#### Parameters
 
 
 
@@ -69,7 +61,7 @@ Enables a plugin
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -78,13 +70,9 @@ Enables a plugin
 
 
 
-#### Command: `install`
+`install` Installs a plugin
 
-##### Description 
-
-Installs a plugin
-
-##### Parameters
+#### Parameters
 
 
 
@@ -92,7 +80,7 @@ Installs a plugin
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -101,17 +89,13 @@ Installs a plugin
 
 
 
-#### Command: `list`
+`list` Lists all installed plugins
 
-##### Description 
-
-Lists all installed plugins
-
-##### Parameters
+#### Parameters
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -120,13 +104,9 @@ Lists all installed plugins
 
 
 
-#### Command: `uninstall`
+`uninstall` Uninstalls a plugin
 
-##### Description 
-
-Uninstalls a plugin
-
-##### Parameters
+#### Parameters
 
 
 
@@ -134,7 +114,7 @@ Uninstalls a plugin
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -143,13 +123,9 @@ Uninstalls a plugin
 
 
 
-#### Command: `update`
+`update` Updates a plugin
 
-##### Description 
-
-Updates a plugin
-
-##### Parameters
+#### Parameters
 
 
 
@@ -157,7 +133,7 @@ Updates a plugin
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -170,32 +146,24 @@ Updates a plugin
 ### Openai Plugin
 
 
-#### Command: `chat`
+`chat` An interactive session with OpenAI
 
-##### Description 
-
-An interactive session with OpenAI
-
-##### Parameters
+#### Parameters
 
 
 
-##### Examples
+#### Examples
 
 
 
 
-#### Command: `models`
+`models` List available models
 
-##### Description 
-
-List available models
-
-##### Parameters
+#### Parameters
 
 
 
-##### Examples
+#### Examples
 
 
 
@@ -204,32 +172,24 @@ List available models
 
 
 
-#### Command: `prompts`
+`prompts` Preconfigured prompt to use with chats
 
-##### Description 
-
-Preconfigured prompt to use with chats
-
-##### Parameters
+#### Parameters
 
 
 
-##### Examples
+#### Examples
 
 
 
 
-#### Command: `send`
+`send` Send one or more messages to OpenAI
 
-##### Description 
-
-Send one or more messages to OpenAI
-
-##### Parameters
+#### Parameters
 
 
 
-##### Examples
+#### Examples
 
 
 

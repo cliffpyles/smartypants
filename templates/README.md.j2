@@ -34,13 +34,9 @@ _no usage guide specified_
 ### {{ plugin.name.capitalize() }} Plugin
 
 {% for command in plugin.commands %}
-#### Command: `{{ command.name }}`
+`{{ command.name }}` {{ command.description }}
 
-##### Description 
-
-{{ command.description }}
-
-##### Parameters
+#### Parameters
 
 {% if command.get('arguments') %}
 {% for argument in command.arguments %}
@@ -48,7 +44,7 @@ _no usage guide specified_
 {% endfor %}
 {% endif %}
 
-##### Examples
+#### Examples
 
 {% if command.get('examples') %}
 {% for example in command.examples %}
