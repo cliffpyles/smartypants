@@ -1,437 +1,265 @@
-# SmartyPants
+# SmartyPants CLI Tool
 
-A CLI tool for interacting with AI services
+Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI services, featuring a powerful command and plugin system!
 
-## Table of Contents
+## Contents
 
-* [core](#core)
-* [`smartypants core version`](#smartypants core-version)
-* [plugins](#plugins)
-* [`smartypants plugins disable`](#smartypants plugins-disable)
-* [`smartypants plugins enable`](#smartypants plugins-enable)
-* [`smartypants plugins install`](#smartypants plugins-install)
-* [`smartypants plugins list`](#smartypants plugins-list)
-* [`smartypants plugins uninstall`](#smartypants plugins-uninstall)
-* [`smartypants plugins update`](#smartypants plugins-update)
-* [Plugins](#plugins)
-* [OpenAI](#OpenAI)
-* [`smartypants OpenAI chat`](#smartypants OpenAI-chat)
-* [`smartypants OpenAI models`](#smartypants OpenAI-models)
-* [`smartypants OpenAI prompts`](#smartypants OpenAI-prompts)
-* [`smartypants OpenAI send`](#smartypants OpenAI-send)
-* [Installation](#installation)
+1. [Setup](#setup)
+2. [Usage](#usage)
+3. [Plugins Overview](#plugins-overview)
+4. [Contributor Guidelines](#contributor-guidelines)
+5. [Licenses and Legal](#licenses-and-legal)
 
-* [Usage](#usage)
+## Setup
 
-* [Examples](#examples)
+### Requirements
 
-## Installation
+_no requirements specified_
 
-Replace `<version>` with the version you want to install.
+### Installation
 
-You can install this package using pip, npm or homebrew:
-
-### Homebrew:
-
-```bash
-
-brew install SmartyPants
-
-```
-
-### NPM:
-
-```bash
-
-npm install -g SmartyPants
-
-```
-
-### Pip:
-
-```bash
-
-pip install SmartyPants
-
-```
+_no installation guide specified_
 
 ## Usage
 
-### core
+_no usage guide specified_
 
-#### Command: * [`smartypants core version`](#smartypants core-version)
-
-Displays current version
+### Global Commands
 
 
-Usage:
+#### Command: `core`
 
-```bash
+##### Description 
 
-smartypants core version <arguments> <options>
 
-```
 
-### plugins
+##### Parameters
 
-#### Command: * [`smartypants plugins disable`](#smartypants plugins-disable)
+
+
+##### Examples
+
+
+
+
+
+## Plugins Overview
+
+
+### Plugins Plugin
+
+
+#### Command: `disable`
+
+##### Description 
 
 Disables a plugin
 
-
-Arguments:
-
-- `plugin`: Name of plugin
+##### Parameters
 
 
-Usage:
 
-```bash
+- `plugin` (Required): Name of plugin
 
-smartypants plugins disable <arguments> <options>
 
-```
 
-#### Command: * [`smartypants plugins enable`](#smartypants plugins-enable)
+##### Examples
+
+
+
+- **Disable a plugin**: `smartypants plugins disable my_plugin`
+
+
+
+
+#### Command: `enable`
+
+##### Description 
 
 Enables a plugin
 
-
-Arguments:
-
-- `plugin`: Name of plugin
+##### Parameters
 
 
-Usage:
 
-```bash
+- `plugin` (Required): Name of plugin
 
-smartypants plugins enable <arguments> <options>
 
-```
 
-#### Command: * [`smartypants plugins install`](#smartypants plugins-install)
+##### Examples
+
+
+
+- **Enable a plugin**: `smartypants plugins enable my_plugin`
+
+
+
+
+#### Command: `install`
+
+##### Description 
 
 Installs a plugin
 
-
-Arguments:
-
-- `plugin`: Name of plugin
+##### Parameters
 
 
-Usage:
 
-```bash
+- `plugin` (Required): Name of plugin
 
-smartypants plugins install <arguments> <options>
 
-```
 
-#### Command: * [`smartypants plugins list`](#smartypants plugins-list)
+##### Examples
+
+
+
+- **Install a plugin**: `smartypants plugins install my_plugin`
+
+
+
+
+#### Command: `list`
+
+##### Description 
 
 Lists all installed plugins
 
+##### Parameters
 
-Usage:
 
-```bash
 
-smartypants plugins list <arguments> <options>
+##### Examples
 
-```
 
-#### Command: * [`smartypants plugins uninstall`](#smartypants plugins-uninstall)
+
+- **List all installed plugins**: `smartypants plugins list`
+
+
+
+
+#### Command: `uninstall`
+
+##### Description 
 
 Uninstalls a plugin
 
-
-Arguments:
-
-- `plugin`: Name of plugin
+##### Parameters
 
 
-Usage:
 
-```bash
+- `plugin` (Required): Name of plugin
 
-smartypants plugins uninstall <arguments> <options>
 
-```
 
-#### Command: * [`smartypants plugins update`](#smartypants plugins-update)
+##### Examples
+
+
+
+- **Uninstall a plugin**: `smartypants plugins uninstall my_plugin`
+
+
+
+
+#### Command: `update`
+
+##### Description 
 
 Updates a plugin
 
-
-Arguments:
-
-- `plugin`: Name of plugin
+##### Parameters
 
 
-Usage:
 
-```bash
+- `plugin` : Name of plugin
 
-smartypants plugins update <arguments> <options>
 
-```
 
-## Plugins
+##### Examples
 
-### OpenAI
 
-#### Command: * [`smartypants OpenAI chat`](#smartypants OpenAI-chat)
+
+- **Update a plugin**: `smartypants plugins update my_plugin`
+
+
+
+
+
+### Openai Plugin
+
+
+#### Command: `chat`
+
+##### Description 
 
 An interactive session with OpenAI
 
+##### Parameters
 
-Usage:
 
-```bash
 
-smartypants OpenAI chat <arguments> <options>
+##### Examples
 
-```
 
-#### Command: * [`smartypants OpenAI chat create`](#smartypants OpenAI chat-create)
 
-Create a new chat
 
+#### Command: `models`
 
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat create <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat delete`](#smartypants OpenAI chat-delete)
-
-Delete a chat
-
-
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat delete <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat export`](#smartypants OpenAI chat-export)
-
-Export a chat to a prompt
-
-
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat export <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat fork`](#smartypants OpenAI chat-fork)
-
-Create a copy of a chat
-
-
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat fork <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat list`](#smartypants OpenAI chat-list)
-
-List all chats
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat list <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat open`](#smartypants OpenAI chat-open)
-
-Open a chat
-
-
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat open <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI chat view`](#smartypants OpenAI chat-view)
-
-Show the chat
-
-
-Arguments:
-
-- `chat_name`: Name of the chat
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI chat view <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI models`](#smartypants OpenAI-models)
+##### Description 
 
 List available models
 
+##### Parameters
 
-Usage:
 
-```bash
 
-smartypants OpenAI models <arguments> <options>
+##### Examples
 
-```
 
-#### Command: * [`smartypants OpenAI prompts`](#smartypants OpenAI-prompts)
+
+- **List available models in OpenAI**: `smartypants openai models`
+
+
+
+
+#### Command: `prompts`
+
+##### Description 
 
 Preconfigured prompt to use with chats
 
-
-Usage:
-
-```bash
-
-smartypants OpenAI prompts <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI prompts create`](#smartypants OpenAI prompts-create)
-
-Create a new prompt
+##### Parameters
 
 
-Arguments:
 
-- `prompt_name`: Name of the prompt
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI prompts create <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI prompts delete`](#smartypants OpenAI prompts-delete)
-
-Delete a prompt
+##### Examples
 
 
-Arguments:
-
-- `prompt_name`: Name of the prompt
 
 
-Usage:
+#### Command: `send`
 
-```bash
-
-smartypants OpenAI prompts delete <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI prompts list`](#smartypants OpenAI prompts-list)
-
-List available prompts
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI prompts list <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI prompts view`](#smartypants OpenAI prompts-view)
-
-View a prompt
-
-
-Arguments:
-
-- `prompt_name`: Name of the prompt
-
-
-Usage:
-
-```bash
-
-smartypants OpenAI prompts view <arguments> <options>
-
-```
-
-#### Command: * [`smartypants OpenAI send`](#smartypants OpenAI-send)
+##### Description 
 
 Send one or more messages to OpenAI
 
-
-Options:
-
-- `attach`: File to include as message
-
-- `live`: Stream the response as it is received
-
-- `message`: Message to send
-
-- `model`: Language model to use
-
-- `raw`: Don't format the response
+##### Parameters
 
 
-Usage:
 
-```bash
+##### Examples
 
-smartypants OpenAI send <arguments> <options>
 
-```
 
-## Examples
+- **Send one or more messages to OpenAI**: `smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'`
+
+
+
+
+
+
+## Contributor Guidelines
+
+
+
+## Licenses and Legal
+

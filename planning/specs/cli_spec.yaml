@@ -1,12 +1,13 @@
 name: SmartyPants
-description: A CLI tool for interacting with AI services
+description: CLI tool that interacts with AI services
 binary_name: smartypants
 aliases: [sp]
-modules:
+commands:
   - name: core
     commands:
       - name: version
         description: Displays current version
+plugins:
   - name: plugins
     commands:
       - name: disable
@@ -15,34 +16,52 @@ modules:
           - name: plugin
             description: Name of plugin
             required: true
+        examples:
+          - description: Disable a plugin
+            command: smartypants plugins disable my_plugin
       - name: enable
         description: Enables a plugin
         arguments:
           - name: plugin
             description: Name of plugin
             required: true
+        examples:
+          - description: Enable a plugin
+            command: smartypants plugins enable my_plugin
       - name: install
         description: Installs a plugin
         arguments:
           - name: plugin
             description: Name of plugin
             required: true
+        examples:
+          - description: Install a plugin
+            command: smartypants plugins install my_plugin
       - name: list
         description: Lists all installed plugins
+        examples:
+          - description: List all installed plugins
+            command: smartypants plugins list
       - name: uninstall
         description: Uninstalls a plugin
         arguments:
           - name: plugin
             description: Name of plugin
             required: true
+        examples:
+          - description: Uninstall a plugin
+            command: smartypants plugins uninstall my_plugin
       - name: update
         description: Updates a plugin
         arguments:
           - name: plugin
             description: Name of plugin
             required: false
-plugins:
-  - name: OpenAI
+        examples:
+          - description: Update a plugin
+            command: smartypants plugins update my_plugin
+
+  - name: openai
     commands:
       - name: chat
         description: An interactive session with OpenAI
@@ -55,43 +74,67 @@ plugins:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Create a new chat in OpenAI'
+                command: "smartypants openai chat create --chat_name 'my_chat'"
           - name: delete
             description: Delete a chat
             arguments:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Delete a chat in OpenAI'
+                command: "smartypants openai chat delete --chat_name 'my_chat'"
           - name: export
             description: Export a chat to a prompt
             arguments:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Export a chat to a prompt in OpenAI'
+                command: "smartypants openai chat export --chat_name 'my_chat'"
           - name: fork
             description: Create a copy of a chat
             arguments:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Create a copy of a chat in OpenAI'
+                command: "smartypants openai chat fork --chat_name 'my_chat'"
           - name: list
             description: List all chats
             arguments: []
+            examples:
+              - description: 'List all chats in OpenAI'
+                command: 'smartypants openai chat list'
           - name: open
             description: Open a chat
             arguments:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Open a chat in OpenAI'
+                command: "smartypants openai chat open --chat_name 'my_chat'"
           - name: view
             description: Show the chat
             arguments:
               - name: chat_name
                 description: Name of the chat
                 type: String
+            examples:
+              - description: 'Show the chat in OpenAI'
+                command: "smartypants openai chat view --chat_name 'my_chat'"
       - name: models
         description: List available models
         arguments: []
         options: []
+        examples:
+          - description: 'List available models in OpenAI'
+            command: 'smartypants openai models'
       - name: prompts
         description: Preconfigured prompt to use with chats
         arguments: []
@@ -103,20 +146,32 @@ plugins:
               - name: prompt_name
                 description: Name of the prompt
                 type: String
+            examples:
+              - description: 'Create a new prompt in OpenAI'
+                command: "smartypants openai prompts create --prompt_name 'my_prompt'"
           - name: delete
             description: Delete a prompt
             arguments:
               - name: prompt_name
                 description: Name of the prompt
                 type: String
+            examples:
+              - description: 'Delete a prompt in OpenAI'
+                command: "smartypants openai prompts delete --prompt_name 'my_prompt'"
           - name: list
             description: List available prompts
+            examples:
+              - description: 'List available prompts in OpenAI'
+                command: 'smartypants openai prompts list'
           - name: view
             description: View a prompt
             arguments:
               - name: prompt_name
                 description: Name of the prompt
                 type: String
+            examples:
+              - description: 'View a prompt in OpenAI'
+                command: "smartypants openai prompts view --prompt_name 'my_prompt'"
       - name: send
         description: Send one or more messages to OpenAI
         arguments: []
@@ -148,12 +203,6 @@ plugins:
             description: Don't format the response
             type: Boolean
             default: false
-    examples:
-      - description: Create a chat
-        example: 'smartypants'
-      - description: Delete a chat
-      - description: Export a chat
-      - description: Fork a chat
-      - description: List a chat
-      - description: Open a chat
-      - description: View a chat
+        examples:
+          - description: 'Send one or more messages to OpenAI'
+            command: "smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'"

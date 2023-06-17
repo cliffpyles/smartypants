@@ -1,0 +1,91 @@
+# {{ name }} CLI Tool
+
+Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services, featuring a powerful command and plugin system!
+
+## Contents
+
+1. [Setup](#setup)
+2. [Usage](#usage)
+3. [Plugins Overview](#plugins-overview)
+4. [Contributor Guidelines](#contributor-guidelines)
+5. [Licenses and Legal](#licenses-and-legal)
+
+## Setup
+
+### Requirements
+
+{{ requirements or '_no requirements specified_' }}
+
+### Installation
+
+{{ installation_guide or '_no installation guide specified_' }}
+
+## Usage
+
+{{ usage_guide or '_no usage guide specified_' }}
+
+### Global Commands
+
+{% for command in commands %}
+#### Command: `{{ command.name }}`
+
+##### Description 
+
+{{ command.description }}
+
+##### Parameters
+
+{% if command.get('arguments') %}
+{% for argument in command.arguments %}
+- `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
+{% endfor %}
+{% endif %}
+
+##### Examples
+
+{% if command.get('examples') %}
+{% for example in command.examples %}
+- **{{ example.description }}**: `{{ example.command }}`
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+
+## Plugins Overview
+
+{% for plugin in plugins %}
+### {{ plugin.name.capitalize() }} Plugin
+
+{% for command in plugin.commands %}
+#### Command: `{{ command.name }}`
+
+##### Description 
+
+{{ command.description }}
+
+##### Parameters
+
+{% if command.get('arguments') %}
+{% for argument in command.arguments %}
+- `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
+{% endfor %}
+{% endif %}
+
+##### Examples
+
+{% if command.get('examples') %}
+{% for example in command.examples %}
+- **{{ example.description }}**: `{{ example.command }}`
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% endfor %}
+
+## Contributor Guidelines
+
+{{ contributor_guidelines }}
+
+## Licenses and Legal
+
+{{ licenses_and_legal }}
