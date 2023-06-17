@@ -1,6 +1,7 @@
 name: SmartyPants
 description: A CLI tool for interacting with AI services
-binaries: [smartypants, sp]
+binary_name: smartypants
+aliases: [sp]
 modules:
   - name: core
     commands:
@@ -43,9 +44,6 @@ modules:
 plugins:
   - name: OpenAI
     commands:
-      - name: ask
-        arguments: []
-        options: []
       - name: chat
         arguments: []
         options: []
@@ -71,8 +69,27 @@ plugins:
         arguments: []
         options: []
       - name: send
+        description: Send one or more messages to OpenAI
         arguments: []
-        options: []
+        options:
+          - name: attach
+            description: File to include as message
+            type: filepath
+            required: false
+          - name: message
+            description: Message to send
+            type: string
+            required: false
+          - name: model
+            description: Language model to use
+            type: string
+            default: gpt-3.5-turbo
+            allowed:
+              - gpt-3.5-turbo
+              - gpt-4
+              - gpt-3.5-turbo-0613
+              - gpt-3.5-turbo-16k
+              - gpt-4-0613
       - name: show
         arguments: []
         options: []
