@@ -40,7 +40,7 @@ _no usage guide specified_
 
 {% if command.get('arguments') %}
 {% for argument in command.arguments %}
-- `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
+`{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
 {% endfor %}
 {% endif %}
 
@@ -49,7 +49,9 @@ _no usage guide specified_
 {% if command.get('examples') %}
 {% for example in command.examples %}
 **{{ example.description }}**
-`{{ example.command }}`
+```bash
+{{ example.command }}
+```
 {% endfor %}
 {% endif %}
 
