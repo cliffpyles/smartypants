@@ -22,11 +22,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 ## Usage
 
-{% if usage_guide %}
-`{{ usage_guide }}`
-{% else%}
-_no usage guide specified_
-{% endif %}
+{{ usage_guide or '_no usage guide specified_' }}
 
 ## Plugins
 
