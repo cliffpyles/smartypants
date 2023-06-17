@@ -1,0 +1,17 @@
+{
+  "author": "Cliff Pyles <cliff@cliffpyles.com>",
+  "bin": {
+    "smartypants": "./smarty_pants.py",
+    "sp": "./smarty_pants.py"
+  },
+  "description": "A CLI tool for interacting with AI services",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@cliffpyles/smartypants",
+  "scripts": {
+    "preinstall": "python install.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2-alpha"
+}
