@@ -314,6 +314,7 @@ def view_prompts(prompts):
 def view_response_stream(response_generator, raw=False):
     all_lines = ""
     line = ""
+
     if not raw:
         click.secho(f"\n\n{RESPONSE_INDICATOR} Response:\n", bold=True)
         with Live(refresh_per_second=10) as live:

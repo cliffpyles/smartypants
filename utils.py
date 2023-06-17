@@ -282,6 +282,20 @@ def send_chat_async(**kwargs):
     return response_generator
 
 
+def send_messages_async(model, messages):
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+    messages_payload = []
+
+    for message in messages:
+        messages_payload.append(serialize_message(message))
+
+    response_generator = openai.ChatCompletion.create(
+        stream=True, model=model, messages=messages_payload
+    )
+
+    return response_generator
+
+
 def send_messages_sync(model, messages):
     openai.api_key = os.environ["OPENAI_API_KEY"]
     messages_payload = []

@@ -12,8 +12,8 @@ from utils import (
     save_prompt,
     send_chat_async,
     send_chat_message_sync,
-    send_chat_message_async,
     send_messages_sync,
+    send_messages_async,
     send_image,
 )
 from views import (
@@ -99,23 +99,29 @@ def ask_command_async(user_input, model, prompt, raw):
     prompt = load_prompt(prompt)
     model = model or prompt["model"]
     messages = prompt["messages"]
+    conversation = Datastore()
     user_message = {
         "role": "user",
         "name": username,
         "mac_address": mac_address,
         "content": user_input,
     }
+
+    for message in messages:
+        conversation.add_item(message)
+
+    conversation.add_item(user_message)
+
     if raw:
-        response_generator = send_chat_message_async(
-            model=model, messages=messages, user_message=user_message
+        response_generator = send_messages_async(
+            model=model, messages=conversation.get_items()
         )
         view_response_stream(response_generator, raw=raw)
     else:
-        view_messages(messages, model)
-        response_generator = send_chat_message_async(
-            model=model, messages=messages, user_message=user_message
+        view_messages(conversation.get_items(), model)
+        response_generator = send_messages_async(
+            model=model, messages=conversation.get_items()
         )
-        # view_message(messages, model)
         view_response_stream(response_generator, raw=raw)
 
 
