@@ -6,7 +6,7 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
 
 1. [Setup](#setup)
 2. [Usage](#usage)
-3. [Plugins Overview](#plugins-overview)
+3. [Plugins](#plugins)
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
 
@@ -22,28 +22,11 @@ _no installation guide specified_
 
 ## Usage
 
-_no usage guide specified_
 
-### Global Commands
-
-
-#### Command: `core`
-
-##### Description 
+`smartypants <plugin_name> <plugin_command> [arguments] [options]`
 
 
-
-##### Parameters
-
-
-
-##### Examples
-
-
-
-
-
-## Plugins Overview
+## Plugins
 
 
 ### Plugins Plugin

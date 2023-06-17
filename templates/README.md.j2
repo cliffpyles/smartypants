@@ -6,7 +6,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 1. [Setup](#setup)
 2. [Usage](#usage)
-3. [Plugins Overview](#plugins-overview)
+3. [Plugins](#plugins)
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
 
@@ -22,36 +22,13 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 ## Usage
 
-{{ usage_guide or '_no usage guide specified_' }}
-
-### Global Commands
-
-{% for command in commands %}
-#### Command: `{{ command.name }}`
-
-##### Description 
-
-{{ command.description }}
-
-##### Parameters
-
-{% if command.get('arguments') %}
-{% for argument in command.arguments %}
-- `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
-{% endfor %}
+{% if usage_guide %}
+`{{ usage_guide }}`
+{% else%}
+_no usage guide specified_
 {% endif %}
 
-##### Examples
-
-{% if command.get('examples') %}
-{% for example in command.examples %}
-- **{{ example.description }}**: `{{ example.command }}`
-{% endfor %}
-{% endif %}
-
-{% endfor %}
-
-## Plugins Overview
+## Plugins
 
 {% for plugin in plugins %}
 ### {{ plugin.name.capitalize() }} Plugin

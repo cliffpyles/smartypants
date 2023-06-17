@@ -2,6 +2,7 @@ name: SmartyPants
 description: CLI tool that interacts with AI services
 binary_name: smartypants
 aliases: [sp]
+usage_guide: smartypants <plugin_name> <plugin_command> [arguments] [options]
 commands:
   - name: core
     commands:
