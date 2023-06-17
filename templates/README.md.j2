@@ -48,7 +48,8 @@ _no usage guide specified_
 
 {% if command.get('examples') %}
 {% for example in command.examples %}
-- **{{ example.description }}**: `{{ example.command }}`
+**{{ example.description }}**
+`{{ example.command }}`
 {% endfor %}
 {% endif %}
 

@@ -46,7 +46,8 @@ _no installation guide specified_
 
 
 
-- **Disable a plugin**: `smartypants plugins disable my_plugin`
+**Disable a plugin**
+`smartypants plugins disable my_plugin`
 
 
 
@@ -65,7 +66,8 @@ _no installation guide specified_
 
 
 
-- **Enable a plugin**: `smartypants plugins enable my_plugin`
+**Enable a plugin**
+`smartypants plugins enable my_plugin`
 
 
 
@@ -84,7 +86,8 @@ _no installation guide specified_
 
 
 
-- **Install a plugin**: `smartypants plugins install my_plugin`
+**Install a plugin**
+`smartypants plugins install my_plugin`
 
 
 
@@ -99,7 +102,8 @@ _no installation guide specified_
 
 
 
-- **List all installed plugins**: `smartypants plugins list`
+**List all installed plugins**
+`smartypants plugins list`
 
 
 
@@ -118,7 +122,8 @@ _no installation guide specified_
 
 
 
-- **Uninstall a plugin**: `smartypants plugins uninstall my_plugin`
+**Uninstall a plugin**
+`smartypants plugins uninstall my_plugin`
 
 
 
@@ -137,7 +142,8 @@ _no installation guide specified_
 
 
 
-- **Update a plugin**: `smartypants plugins update my_plugin`
+**Update a plugin**
+`smartypants plugins update my_plugin`
 
 
 
@@ -167,7 +173,8 @@ _no installation guide specified_
 
 
 
-- **List available models in OpenAI**: `smartypants openai models`
+**List available models in OpenAI**
+`smartypants openai models`
 
 
 
@@ -193,7 +200,8 @@ _no installation guide specified_
 
 
 
-- **Send one or more messages to OpenAI**: `smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'`
+**Send one or more messages to OpenAI**
+`smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'`
 
 
 
