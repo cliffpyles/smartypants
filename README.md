@@ -19,12 +19,19 @@ _no requirements specified_
 ### Installation
 
 **Homebrew**
+
 `brew install smartypants-cli`
+
 or
+
 **NPM**
+
 `npm install -g smartypants-cli`
+
 or
+
 **PIP**
+
 `pip install smartpants-cli`
 
 
