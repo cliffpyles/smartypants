@@ -45,44 +45,54 @@ plugins:
   - name: OpenAI
     commands:
       - name: chat
+        description: An interactive session with OpenAI
         arguments: []
         options: []
-      - name: delete
-        arguments: []
-        options: []
-      - name: draw
-        arguments: []
-        options: []
-      - name: edit
-        arguments: []
-        options: []
-      - name: fork
-        arguments: []
-        options: []
-      - name: list
-        arguments: []
-        options: []
+        commands:
+          - name: create
+            description: Create a new chat
+          - name: delete
+            description: Delete a chat
+          - name: export
+            description: Export a chat to a prompt
+          - name: fork
+            description: Create a copy of a chat
+          - name: list
+            description: List all chats
+          - name: open
+            description: Open a chat
+          - name: view
+            description: Show the chat
       - name: models
+        description: List available models
         arguments: []
         options: []
       - name: prompts
         arguments: []
         options: []
+        commands:
+          - name: create
+          - name: delete
+          - name: list
+          - name: view
       - name: send
         description: Send one or more messages to OpenAI
         arguments: []
         options:
           - name: attach
             description: File to include as message
-            type: filepath
+            type: String
+            format: filepath
             required: false
+            allow_mutiple: true
           - name: message
             description: Message to send
-            type: string
+            type: String
             required: false
+            allow_mutiple: true
           - name: model
             description: Language model to use
-            type: string
+            type: String
             default: gpt-3.5-turbo
             allowed:
               - gpt-3.5-turbo
@@ -90,6 +100,6 @@ plugins:
               - gpt-3.5-turbo-0613
               - gpt-3.5-turbo-16k
               - gpt-4-0613
-      - name: show
-        arguments: []
-        options: []
+    schemas:
+      ChatResponse:
+        type: Object
