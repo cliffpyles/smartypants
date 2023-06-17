@@ -54,8 +54,10 @@ class Datastore:
                     return json.load(file)
             else:
                 return []
-        elif self.initial_data:
+        elif self.initial_data is not None:
             return deepcopy(self.initial_data)
+        else:
+            return []
 
     def save_items(self):
         if self.file_name:

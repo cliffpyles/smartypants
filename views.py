@@ -228,11 +228,11 @@ def view_image(image_description, image_url, size):
 def view_message(message, model="Unknown", raw=False):
     message_id = message.get("id", None)
     if message["role"] == "user":
-        click.secho(f"\n\n{MESSAGE_INDICATOR} Message:\n", bold=True)
+        click.secho(f"{MESSAGE_INDICATOR} Message:\n", bold=True)
     elif message["role"] == "system":
-        click.secho(f"\n\n{SYSTEM_INDICATOR} System:\n", bold=True)
+        click.secho(f"{SYSTEM_INDICATOR} System:\n", bold=True)
     elif message["role"] == "assistant":
-        click.secho(f"\n\n{RESPONSE_INDICATOR} Response:\n", bold=True)
+        click.secho(f"{RESPONSE_INDICATOR} Response:\n", bold=True)
 
     if raw:
         click.echo(message["content"])
@@ -271,18 +271,18 @@ def view_message(message, model="Unknown", raw=False):
         )
         click.echo("\n")
         console.rule(f"{divider_label}", align="center")
-        click.echo("\n")
+
     elif message["role"] == "user":
         divider_label = (
             f"{MESSAGE_INDICATOR} {message_id}{usage_label}" if message_id else ""
         )
         click.echo("\n")
-        console.rule(f"{divider_label}", align="center")
-        click.echo("\n")
+        console.rule(f"\n{divider_label}", align="center")
 
 
 def view_messages(messages, model="Unknown", raw=False):
     for message in messages:
+        click.echo("\n")
         view_message(message, model, raw)
 
 

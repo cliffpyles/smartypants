@@ -13,6 +13,7 @@ from utils import (
     send_chat_async,
     send_chat_message_sync,
     send_chat_message_async,
+    send_messages_sync,
     send_image,
 )
 from views import (
@@ -68,24 +69,29 @@ def ask_command_sync(user_input, model, prompt, raw):
     prompt = load_prompt(prompt)
     model = model or prompt["model"]
     messages = prompt["messages"]
+    conversation = Datastore()
     user_message = {
         "role": "user",
         "name": username,
         "mac_address": mac_address,
         "content": user_input,
     }
-    get_api_data = lambda: send_chat_message_sync(
-        model=model, messages=messages, user_message=user_message
-    )
+
+    for message in messages:
+        conversation.add_item(message)
+
+    conversation.add_item(user_message)
+
+    def get_api_data():
+        return send_messages_sync(model=model, messages=conversation.get_items())
+
     if raw:
         response_message = get_api_data()
         click.echo(response_message["content"])
     else:
-        messages.append(user_message)
-        view_messages(messages, model)
         response_message = view_data_loader(fn=get_api_data)
-        messages.append(response_message)
-        view_message(messages[-1])
+        conversation.add_item(response_message)
+        view_messages(conversation.get_items(), model)
 
 
 def ask_command_async(user_input, model, prompt, raw):

@@ -272,7 +272,7 @@ def send_chat_sync(**kwargs):
     openai.api_key = os.environ["OPENAI_API_KEY"]
     response = openai.ChatCompletion.create(**kwargs)
 
-    return response["choices"][0]["message"]
+    return response["choices"][0]
 
 
 def send_chat_async(**kwargs):
