@@ -177,7 +177,7 @@ _Usage:_ `smartypants plugins disable <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin
+`plugin` (Required) : Name of plugin
 
 
 
@@ -210,7 +210,7 @@ _Usage:_ `smartypants plugins enable <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin
+`plugin` (Required) : Name of plugin
 
 
 
@@ -243,7 +243,7 @@ _Usage:_ `smartypants plugins install <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin
+`plugin` (Required) : Name of plugin
 
 
 
@@ -300,7 +300,7 @@ _Usage:_ `smartypants plugins uninstall <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin
+`plugin` (Required) : Name of plugin
 
 
 
@@ -333,7 +333,7 @@ _Usage:_ `smartypants plugins update <arguments>`
 ##### Arguments
 
 
-`plugin` ()  : Name of plugin
+`plugin`  : Name of plugin
 
 
 
@@ -366,7 +366,7 @@ _Usage:_ `smartypants plugins status <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin
+`plugin` (Required) : Name of plugin
 
 
 
