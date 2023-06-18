@@ -49,11 +49,17 @@ _no requirements specified_
 
 `disable` Disables a plugin
 
-#### Parameters
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
 
 
 
 `plugin` (Required): Name of plugin
+
+
+
+#### Options
 
 
 
@@ -63,7 +69,7 @@ _no requirements specified_
 
 **Disable a plugin**
 ```bash
-smartypants plugins disable my_plugin
+smartypants plugins disable openai
 ```
 
 
@@ -71,11 +77,17 @@ smartypants plugins disable my_plugin
 
 `enable` Enables a plugin
 
-#### Parameters
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
 
 
 
 `plugin` (Required): Name of plugin
+
+
+
+#### Options
 
 
 
@@ -85,7 +97,7 @@ smartypants plugins disable my_plugin
 
 **Enable a plugin**
 ```bash
-smartypants plugins enable my_plugin
+smartypants plugins enable openai
 ```
 
 
@@ -93,11 +105,17 @@ smartypants plugins enable my_plugin
 
 `install` Installs a plugin
 
-#### Parameters
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
 
 
 
 `plugin` (Required): Name of plugin
+
+
+
+#### Options
 
 
 
@@ -107,7 +125,7 @@ smartypants plugins enable my_plugin
 
 **Install a plugin**
 ```bash
-smartypants plugins install my_plugin
+smartypants plugins install openai
 ```
 
 
@@ -115,7 +133,13 @@ smartypants plugins install my_plugin
 
 `list` Lists all installed plugins
 
-#### Parameters
+Usage: `smartypants plugins`
+
+#### Arguments
+
+
+
+#### Options
 
 
 
@@ -133,11 +157,17 @@ smartypants plugins list
 
 `uninstall` Uninstalls a plugin
 
-#### Parameters
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
 
 
 
 `plugin` (Required): Name of plugin
+
+
+
+#### Options
 
 
 
@@ -147,7 +177,7 @@ smartypants plugins list
 
 **Uninstall a plugin**
 ```bash
-smartypants plugins uninstall my_plugin
+smartypants plugins uninstall openai
 ```
 
 
@@ -155,11 +185,17 @@ smartypants plugins uninstall my_plugin
 
 `update` Updates a plugin
 
-#### Parameters
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
 
 
 
 `plugin` : Name of plugin
+
+
+
+#### Options
 
 
 
@@ -169,7 +205,35 @@ smartypants plugins uninstall my_plugin
 
 **Update a plugin**
 ```bash
-smartypants plugins update my_plugin
+smartypants plugins update openai
+```
+
+
+
+
+`status` Shows state of a specific plugin
+
+Usage: `smartypants plugins <arguments>`
+
+#### Arguments
+
+
+
+`plugin` : Name of plugin
+
+
+
+#### Options
+
+
+
+#### Examples
+
+
+
+**Show status of a plugin**
+```bash
+smartypants plugins status openai
 ```
 
 
@@ -181,7 +245,13 @@ smartypants plugins update my_plugin
 
 `chat` An interactive session with OpenAI
 
-#### Parameters
+Usage: `smartypants openai`
+
+#### Arguments
+
+
+
+#### Options
 
 
 
@@ -192,7 +262,13 @@ smartypants plugins update my_plugin
 
 `models` List available models
 
-#### Parameters
+Usage: `smartypants openai`
+
+#### Arguments
+
+
+
+#### Options
 
 
 
@@ -210,7 +286,13 @@ smartypants openai models
 
 `prompts` Preconfigured prompt to use with chats
 
-#### Parameters
+Usage: `smartypants openai`
+
+#### Arguments
+
+
+
+#### Options
 
 
 
@@ -221,7 +303,25 @@ smartypants openai models
 
 `send` Send one or more messages to OpenAI
 
-#### Parameters
+Usage: `smartypants openai [options]`
+
+#### Arguments
+
+
+
+#### Options
+
+
+
+`attach` : File to include as message
+
+`live` : Stream the response as it is received
+
+`message` : Message to send
+
+`model` (Default: gpt-3.5-turbo): Language model to use
+
+`raw` : Don't format the response
 
 
 

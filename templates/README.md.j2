@@ -21,11 +21,11 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 ### Installation
 
-{{ installation_guide or '_no installation guide specified_' }}
+{{ installation or '_no installation instructions specified_' }}
 
 ## Usage
 
-{{ usage_guide or '_no usage guide specified_' }}
+{{ usage or '_no usage guide specified_' }}
 
 ## Plugins
 
@@ -35,11 +35,21 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 {% for command in plugin.commands %}
 `{{ command.name }}` {{ command.description }}
 
-#### Parameters
+Usage: `{{binary_name}} {{plugin.name|lower}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
+
+#### Arguments
 
 {% if command.get('arguments') %}
 {% for argument in command.arguments %}
 `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
+{% endfor %}
+{% endif %}
+
+#### Options
+
+{% if command.get('options') %}
+{% for option in command.options %}
+`{{ option.name }}` {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }}: {{ option.description }}
 {% endfor %}
 {% endif %}
 
