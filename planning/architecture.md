@@ -4,12 +4,13 @@
 
 ```mermaid
 graph LR
-  A[Client] -- GraphQL --> B{Amplify}
+  A[Client] -- GraphQL --> B(Amplify)
   B -- DynamoDB --> C(DynamoDB)
-  B -- Events --> D(EventBridge)
-  D -- trigger --> E(Lambda)
-  E -- request --> F(OpenAI API)
-  E -- update --> C
+  C -- Trigger --> D1(Lambda: DDB Trigger Handler)
+  D1 -- Publish --> E(EventBridge)
+  E -- Subscribe --> D2(Lambda: Event Handlers)
+  D2 -- request --> F(OpenAI API)
+  D2 -- update --> C
 ```
 
 ## Event Flow
@@ -19,14 +20,18 @@ sequenceDiagram
   participant User as User
   participant Amplify as Amplify
   participant DynamoDB as DynamoDB
-  participant Lambda as Lambda
+  participant DDBTrigger as Lambda (DDB Trigger Handler)
+  participant EventBridge as EventBridge
+  participant EventHandler as Lambda (Event Handlers)
   participant OpenAI as OpenAI API
   User->>Amplify: Create/Update (Chat/Message)
   Amplify->>DynamoDB: Write operation
-  DynamoDB->>Lambda: Trigger event
-  Lambda->>OpenAI: Sends data
-  OpenAI->>Lambda: Returns response
-  Lambda->>DynamoDB: Update operation
+  DynamoDB->>DDBTrigger: Trigger event
+  DDBTrigger->>EventBridge: Publish event
+  EventBridge->>EventHandler: Dispatch event
+  EventHandler->>OpenAI: Sends data
+  OpenAI->>EventHandler: Returns response
+  EventHandler->>DynamoDB: Update operation
 ```
 
 ## Data Model
