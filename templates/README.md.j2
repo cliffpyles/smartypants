@@ -57,7 +57,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 {% if command.get('examples') %}
 {% for example in command.examples %}
-**{{ example.description }}**
+_{{ example.description }}_
 ```bash
 {{ example.command }}
 ```

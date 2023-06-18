@@ -67,7 +67,7 @@ _no requirements specified_
 
 
 
-**Disable a plugin**
+_Disable a plugin_
 ```bash
 smartypants plugins disable openai
 ```
@@ -95,7 +95,7 @@ smartypants plugins disable openai
 
 
 
-**Enable a plugin**
+_Enable a plugin_
 ```bash
 smartypants plugins enable openai
 ```
@@ -123,7 +123,7 @@ smartypants plugins enable openai
 
 
 
-**Install a plugin**
+_Install a plugin_
 ```bash
 smartypants plugins install openai
 ```
@@ -147,7 +147,7 @@ smartypants plugins install openai
 
 
 
-**List all installed plugins**
+_List all installed plugins_
 ```bash
 smartypants plugins list
 ```
@@ -175,7 +175,7 @@ smartypants plugins list
 
 
 
-**Uninstall a plugin**
+_Uninstall a plugin_
 ```bash
 smartypants plugins uninstall openai
 ```
@@ -203,7 +203,7 @@ smartypants plugins uninstall openai
 
 
 
-**Update a plugin**
+_Update a plugin_
 ```bash
 smartypants plugins update openai
 ```
@@ -231,7 +231,7 @@ smartypants plugins update openai
 
 
 
-**Show status of a plugin**
+_Show status of a plugin_
 ```bash
 smartypants plugins status openai
 ```
@@ -276,7 +276,7 @@ smartypants plugins status openai
 
 
 
-**List available models in OpenAI**
+_List available models in OpenAI_
 ```bash
 smartypants openai models
 ```
@@ -329,7 +329,7 @@ smartypants openai models
 
 
 
-**Send one or more messages to OpenAI**
+_Send one or more messages to OpenAI_
 ```bash
 smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
 ```
