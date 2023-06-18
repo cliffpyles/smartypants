@@ -66,10 +66,10 @@ None
 {% for option in command.options %}
 `{{ option.name }}`{% if option.type +%} ({{ option.type }}){% endif %} {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }} {{ "(Required)" if option.get('required', False) else "" }} {{ "(Multiple allowed)" if option.get('allow_multiple', False) else "" }}: {{ option.description }}
 {% if option.format +%}
-  _Format:_ `{{ option.format }}`
+- _Format:_ `{{ option.format }}`
 {% endif %}
 {% if option.allowed +%}
-  _Allowed Values:_ `{{ option.allowed | join(', ') if option.get('allowed') else '' }}`
+- _Allowed Values:_ `{{ option.allowed | join(', ') if option.get('allowed') else '' }}`
 {% endif %}
 {% endfor %}
 {% else %}

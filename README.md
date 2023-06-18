@@ -146,7 +146,7 @@ None
 
 `attach` (String)   : File to include as message
 
-  _Format:_ `filepath`
+- _Format:_ `filepath`
 
 
 
@@ -161,7 +161,7 @@ None
 `model` (String) (Default: gpt-3.5-turbo)  : Language model to use
 
 
-  _Allowed Values:_ `gpt-3.5-turbo, gpt-4, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k, gpt-4-0613`
+- _Allowed Values:_ `gpt-3.5-turbo, gpt-4, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k, gpt-4-0613`
 
 
 `raw` (Boolean)   : Don't format the response
