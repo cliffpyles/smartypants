@@ -6,10 +6,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 1. [Setup](#setup)
 2. [Usage](#usage)
-3. [Plugins](#plugins)
-    {% for plugin in plugins %}
-    - [{{ plugin.name }}](#{{ plugin.name }})
-    {% endfor %}
+3. [Commands](#commands)
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
 
@@ -27,7 +24,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 {{ usage or '_no usage guide specified_' }}
 
-## Plugins
+## Commands
 
 {% for plugin in plugins %}
 ### {{ plugin.name }}

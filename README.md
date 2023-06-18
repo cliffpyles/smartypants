@@ -6,12 +6,7 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
 
 1. [Setup](#setup)
 2. [Usage](#usage)
-3. [Plugins](#plugins)
-    
-    - [OpenAI](#OpenAI)
-    
-    - [Plugins](#Plugins)
-    
+3. [Commands](#commands)
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
 
@@ -41,7 +36,7 @@ PIP
 `smartypants <plugin_name> <plugin_command> [arguments] [options]`
 
 
-## Plugins
+## Commands
 
 
 ### OpenAI
