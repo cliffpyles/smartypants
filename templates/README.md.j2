@@ -43,10 +43,9 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} <command> [arguments] [options]`
 
 _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
 
-{% if command.get('arguments') %}
-
 ##### Arguments
 
+{% if command.get('arguments') %}
 {% for argument in command.arguments %}
 `{{ argument.name }}` {% if argument.type +%}({{ argument.type }}){% endif %}{{ "(Required)" if argument.get('required', False) else "" }} {{ "(Multiple allowed)" if argument.get('allow_multiple', False) else "" }}: {{ argument.description }}
 {% if argument.format +%}
@@ -56,13 +55,14 @@ _Format:_ `{{ argument.format }}`
 _Allowed Values:_ `{{ argument.allowed | join(', ') if argument.get('allowed') else '' }}`
 {% endif %}
 {% endfor %}
+{% else %}
+None
 {% endif %}
 
 
-{% if command.get('options') %}
-
 ##### Options
 
+{% if command.get('options') %}
 {% for option in command.options %}
 `{{ option.name }}`{% if option.type +%} ({{ option.type }}){% endif %} {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }} {{ "(Required)" if option.get('required', False) else "" }} {{ "(Multiple allowed)" if option.get('allow_multiple', False) else "" }}: {{ option.description }}
 {% if option.format +%}
@@ -72,6 +72,8 @@ _Format:_ `{{ option.format }}`
 _Allowed Values:_ `{{ option.allowed | join(', ') if option.get('allowed') else '' }}`
 {% endif %}
 {% endfor %}
+{% else %}
+None
 {% endif %}
 
 {% if command.get('examples') %}

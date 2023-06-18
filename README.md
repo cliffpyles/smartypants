@@ -57,9 +57,17 @@ _Usage:_ `smartypants openai <command> [arguments] [options]`
 
 _Usage:_ `smartypants openai chat`
 
+##### Arguments
+
+
+None
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -71,9 +79,17 @@ _Usage:_ `smartypants openai chat`
 
 _Usage:_ `smartypants openai models`
 
+##### Arguments
+
+
+None
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -95,9 +111,17 @@ smartypants openai models
 
 _Usage:_ `smartypants openai prompts`
 
+##### Arguments
+
+
+None
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -109,12 +133,15 @@ _Usage:_ `smartypants openai prompts`
 
 _Usage:_ `smartypants openai send [options]`
 
+##### Arguments
 
 
+None
 
 
 
 ##### Options
+
 
 
 `attach` (String)   : File to include as message
@@ -172,9 +199,8 @@ _Usage:_ `smartypants plugins <command> [arguments] [options]`
 
 _Usage:_ `smartypants plugins disable <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin` (Required) : Name of plugin
@@ -184,6 +210,10 @@ _Usage:_ `smartypants plugins disable <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -205,9 +235,8 @@ smartypants plugins disable openai
 
 _Usage:_ `smartypants plugins enable <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin` (Required) : Name of plugin
@@ -217,6 +246,10 @@ _Usage:_ `smartypants plugins enable <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -238,9 +271,8 @@ smartypants plugins enable openai
 
 _Usage:_ `smartypants plugins install <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin` (Required) : Name of plugin
@@ -250,6 +282,10 @@ _Usage:_ `smartypants plugins install <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -271,9 +307,17 @@ smartypants plugins install openai
 
 _Usage:_ `smartypants plugins list`
 
+##### Arguments
+
+
+None
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -295,9 +339,8 @@ smartypants plugins list
 
 _Usage:_ `smartypants plugins uninstall <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin` (Required) : Name of plugin
@@ -307,6 +350,10 @@ _Usage:_ `smartypants plugins uninstall <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -328,9 +375,8 @@ smartypants plugins uninstall openai
 
 _Usage:_ `smartypants plugins update <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin`  : Name of plugin
@@ -340,6 +386,10 @@ _Usage:_ `smartypants plugins update <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
@@ -361,9 +411,8 @@ smartypants plugins update openai
 
 _Usage:_ `smartypants plugins status <arguments>`
 
-
-
 ##### Arguments
+
 
 
 `plugin` (Required) : Name of plugin
@@ -373,6 +422,10 @@ _Usage:_ `smartypants plugins status <arguments>`
 
 
 
+##### Options
+
+
+None
 
 
 
