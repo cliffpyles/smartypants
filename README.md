@@ -457,6 +457,6 @@ smartypants plugins status openai
 
 ### Formats
 
-- `filetype`: A valid Mac, Linux, or Windows filepath
-- [test test](## "Just testing the tooltips")
-
+| Format  | Definition |
+| ------------- | ------------- |
+| `filetype`  | A valid Mac, Linux, or Windows filepath  |
