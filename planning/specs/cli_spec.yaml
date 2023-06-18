@@ -22,7 +22,7 @@ commands:
       - name: version
         description: Displays current version
 plugins:
-  - name: plugins
+  - name: Plugins
     commands:
       - name: disable
         description: Disables a plugin
@@ -75,7 +75,7 @@ plugins:
           - description: Update a plugin
             command: smartypants plugins update my_plugin
 
-  - name: openai
+  - name: OpenAI
     commands:
       - name: chat
         description: An interactive session with OpenAI

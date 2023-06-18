@@ -8,9 +8,9 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
 2. [Usage](#usage)
 3. [Plugins](#plugins)
     
-    - [Plugins](#plugins)
+    - [Plugins](#Plugins)
     
-    - [Openai](#openai)
+    - [Openai](#OpenAI)
     
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
