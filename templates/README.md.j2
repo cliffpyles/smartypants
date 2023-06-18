@@ -59,9 +59,10 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments
 {% endfor %}
 {% endif %}
 
+{% if command.get('examples') %}
+
 #### Examples
 
-{% if command.get('examples') %}
 {% for example in command.examples %}
 _{{ example.description }}_
 ```bash
