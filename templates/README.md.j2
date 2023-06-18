@@ -37,17 +37,19 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 **Usage:** `{{binary_name}} {{plugin.name|lower}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
 
+{% if command.get('arguments') %}
+
 #### Arguments
 
-{% if command.get('arguments') %}
 {% for argument in command.arguments %}
 `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
 {% endfor %}
 {% endif %}
 
+{% if command.get('options') %}
+
 #### Options
 
-{% if command.get('options') %}
 {% for option in command.options %}
 `{{ option.name }}` {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }}: {{ option.description }}
 {% endfor %}

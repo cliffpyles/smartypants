@@ -51,15 +51,14 @@ _no requirements specified_
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` (Required): Name of plugin
 
 
-
-#### Options
 
 
 
@@ -79,15 +78,14 @@ smartypants plugins disable openai
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` (Required): Name of plugin
 
 
-
-#### Options
 
 
 
@@ -107,15 +105,14 @@ smartypants plugins enable openai
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` (Required): Name of plugin
 
 
-
-#### Options
 
 
 
@@ -135,11 +132,7 @@ smartypants plugins install openai
 
 **Usage:** `smartypants plugins`
 
-#### Arguments
 
-
-
-#### Options
 
 
 
@@ -159,15 +152,14 @@ smartypants plugins list
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` (Required): Name of plugin
 
 
-
-#### Options
 
 
 
@@ -187,15 +179,14 @@ smartypants plugins uninstall openai
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` : Name of plugin
 
 
-
-#### Options
 
 
 
@@ -215,15 +206,14 @@ smartypants plugins update openai
 
 **Usage:** `smartypants plugins <arguments>`
 
-#### Arguments
 
+
+#### Arguments
 
 
 `plugin` : Name of plugin
 
 
-
-#### Options
 
 
 
@@ -247,11 +237,7 @@ smartypants plugins status openai
 
 **Usage:** `smartypants openai`
 
-#### Arguments
 
-
-
-#### Options
 
 
 
@@ -264,11 +250,7 @@ smartypants plugins status openai
 
 **Usage:** `smartypants openai`
 
-#### Arguments
 
-
-
-#### Options
 
 
 
@@ -288,11 +270,7 @@ smartypants openai models
 
 **Usage:** `smartypants openai`
 
-#### Arguments
 
-
-
-#### Options
 
 
 
@@ -305,12 +283,11 @@ smartypants openai models
 
 **Usage:** `smartypants openai [options]`
 
-#### Arguments
+
 
 
 
 #### Options
-
 
 
 `attach` : File to include as message
