@@ -132,6 +132,7 @@ smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
 
 
 
+---
 
 ### Plugins
 
@@ -331,6 +332,7 @@ smartypants plugins status openai
 
 
 
+---
 
 
 ## Contributor Guidelines
