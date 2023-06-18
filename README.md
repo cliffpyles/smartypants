@@ -7,8 +7,7 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
 1. [Setup](#setup)
 2. [Usage](#usage)
 3. [Commands](#commands)
-4. [Contributor Guidelines](#contributor-guidelines)
-5. [Licenses and Legal](#licenses-and-legal)
+3. [References](#references)
 
 ## Setup
 
