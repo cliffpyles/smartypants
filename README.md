@@ -451,6 +451,6 @@ smartypants plugins status openai
 
 ### Formats
 
-| Format  | Definition | Example
-| ------------- | ------------- |
-| `filepath`  | A valid Mac, Linux, or Windows filepath  | `./some/directory/`, `/some/abosolute/`, './some/file.txt'
+| Format  | Definition | Example |
+| ------------- | ------------- | ------------- |
+| `filepath`  | A valid Mac, Linux, or Windows filepath  | `./some/directory/`, `/some/abosolute/`, './some/file.txt' |
