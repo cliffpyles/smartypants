@@ -38,7 +38,7 @@ plugins:
                 type: String
             examples:
               - description: 'Create a new chat in OpenAI'
-                command: "smartypants openai chat create --chat_name 'my_chat'"
+                example: "smartypants openai chat create --chat_name 'my_chat'"
           - name: delete
             description: Delete a chat
             arguments:
@@ -47,7 +47,7 @@ plugins:
                 type: String
             examples:
               - description: 'Delete a chat in OpenAI'
-                command: "smartypants openai chat delete --chat_name 'my_chat'"
+                example: "smartypants openai chat delete --chat_name 'my_chat'"
           - name: export
             description: Export a chat to a prompt
             arguments:
@@ -56,7 +56,7 @@ plugins:
                 type: String
             examples:
               - description: 'Export a chat to a prompt in OpenAI'
-                command: "smartypants openai chat export --chat_name 'my_chat'"
+                example: "smartypants openai chat export --chat_name 'my_chat'"
           - name: fork
             description: Create a copy of a chat
             arguments:
@@ -65,13 +65,13 @@ plugins:
                 type: String
             examples:
               - description: 'Create a copy of a chat in OpenAI'
-                command: "smartypants openai chat fork --chat_name 'my_chat'"
+                example: "smartypants openai chat fork --chat_name 'my_chat'"
           - name: list
             description: List all chats
             arguments: []
             examples:
               - description: 'List all chats in OpenAI'
-                command: 'smartypants openai chat list'
+                example: 'smartypants openai chat list'
           - name: open
             description: Open a chat
             arguments:
@@ -80,7 +80,7 @@ plugins:
                 type: String
             examples:
               - description: 'Open a chat in OpenAI'
-                command: "smartypants openai chat open --chat_name 'my_chat'"
+                example: "smartypants openai chat open --chat_name 'my_chat'"
           - name: view
             description: Show the chat
             arguments:
@@ -89,14 +89,14 @@ plugins:
                 type: String
             examples:
               - description: 'Show the chat in OpenAI'
-                command: "smartypants openai chat view --chat_name 'my_chat'"
+                example: "smartypants openai chat view --chat_name 'my_chat'"
       - name: models
         description: List available models
         arguments: []
         options: []
         examples:
           - description: 'List available models in OpenAI'
-            command: 'smartypants openai models'
+            example: 'smartypants openai models'
       - name: prompts
         description: Preconfigured prompt to use with chats
         arguments: []
@@ -110,7 +110,7 @@ plugins:
                 type: String
             examples:
               - description: 'Create a new prompt in OpenAI'
-                command: "smartypants openai prompts create --prompt_name 'my_prompt'"
+                example: "smartypants openai prompts create --prompt_name 'my_prompt'"
           - name: delete
             description: Delete a prompt
             arguments:
@@ -119,12 +119,12 @@ plugins:
                 type: String
             examples:
               - description: 'Delete a prompt in OpenAI'
-                command: "smartypants openai prompts delete --prompt_name 'my_prompt'"
+                example: "smartypants openai prompts delete --prompt_name 'my_prompt'"
           - name: list
             description: List available prompts
             examples:
               - description: 'List available prompts in OpenAI'
-                command: 'smartypants openai prompts list'
+                example: 'smartypants openai prompts list'
           - name: view
             description: View a prompt
             arguments:
@@ -133,7 +133,7 @@ plugins:
                 type: String
             examples:
               - description: 'View a prompt in OpenAI'
-                command: "smartypants openai prompts view --prompt_name 'my_prompt'"
+                example: "smartypants openai prompts view --prompt_name 'my_prompt'"
       - name: send
         description: Send one or more messages to OpenAI
         arguments: []
@@ -141,7 +141,7 @@ plugins:
           - name: attach
             description: File to include as message
             type: String
-            format: filepath
+            schema: FilepathFormat
             allow_mutiple: true
           - name: live
             description: Stream the response as it is received
@@ -167,7 +167,7 @@ plugins:
             default: false
         examples:
           - description: 'Send one or more messages to OpenAI'
-            command: "smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'"
+            example: "smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'"
   - name: Plugins
     description: Adds support for managing plugins
     commands:
@@ -179,7 +179,7 @@ plugins:
             required: true
         examples:
           - description: Disable a plugin
-            command: smartypants plugins disable openai
+            example: smartypants plugins disable openai
       - name: enable
         description: Enables a plugin
         arguments:
@@ -188,7 +188,7 @@ plugins:
             required: true
         examples:
           - description: Enable a plugin
-            command: smartypants plugins enable openai
+            example: smartypants plugins enable openai
       - name: install
         description: Installs a plugin
         arguments:
@@ -197,12 +197,12 @@ plugins:
             required: true
         examples:
           - description: Install a plugin
-            command: smartypants plugins install openai
+            example: smartypants plugins install openai
       - name: list
         description: Lists all installed plugins
         examples:
           - description: List all installed plugins
-            command: smartypants plugins list
+            example: smartypants plugins list
       - name: uninstall
         description: Uninstalls a plugin
         arguments:
@@ -211,7 +211,7 @@ plugins:
             required: true
         examples:
           - description: Uninstall a plugin
-            command: smartypants plugins uninstall openai
+            example: smartypants plugins uninstall openai
       - name: update
         description: Updates a plugin
         arguments:
@@ -219,7 +219,7 @@ plugins:
             description: Name of plugin
         examples:
           - description: Update a plugin
-            command: smartypants plugins update openai
+            example: smartypants plugins update openai
       - name: status
         description: Shows state of a specific plugin
         arguments:
@@ -228,4 +228,8 @@ plugins:
             required: true
         examples:
           - description: Show status of a plugin
-            command: smartypants plugins status openai
+            example: smartypants plugins status openai
+schemas:
+  FilepathFormat:
+    name: filepath
+    description: A valid Linux or Windows filepath.
