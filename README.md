@@ -146,6 +146,8 @@ None
 
 `attach` (String)   : File to include as message
 
+_Format:_ filepath
+
 
 
 `live` (Boolean)   : Stream the response as it is received

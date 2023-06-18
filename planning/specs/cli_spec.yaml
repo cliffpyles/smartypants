@@ -141,7 +141,7 @@ plugins:
           - name: attach
             description: File to include as message
             type: String
-            schema: FilepathFormat
+            format: filepath
             allow_mutiple: true
           - name: live
             description: Stream the response as it is received
