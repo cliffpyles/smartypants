@@ -1,0 +1,104 @@
+type Chat
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  ) {
+  id: ID!
+  chatName: String
+  owner: String
+  access: AccessType @default(value: "private")
+}
+
+type Model
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  ) {
+  id: ID!
+  modelName: String
+  owner: String
+  access: AccessType @default(value: "private")
+}
+
+type Prompt
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  ) {
+  id: ID!
+  promptName: String
+  owner: String
+  access: AccessType @default(value: "private")
+}
+
+type Message
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  ) {
+  id: ID!
+  messageText: String
+  owner: String
+  access: AccessType @default(value: "private")
+}
+
+type Plugin
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  ) {
+  id: ID!
+  pluginName: String
+  owner: String
+  access: AccessType @default(value: "private")
+}
+
+enum AccessType {
+  public
+  private
+}
