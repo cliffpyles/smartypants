@@ -36,6 +36,8 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 
 _Usage:_ `{{binary_name}} {{plugin.name|lower}} <command> [arguments] [options]`
 
+#### Commands
+
 {% for command in plugin.commands %}
 **{{ command.name }}** {{ command.description }}
 
@@ -43,7 +45,7 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments
 
 {% if command.get('arguments') %}
 
-#### Arguments
+##### Arguments
 
 {% for argument in command.arguments %}
 `{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
@@ -52,7 +54,7 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments
 
 {% if command.get('options') %}
 
-#### Options
+##### Options
 
 {% for option in command.options %}
 `{{ option.name }}` {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }}: {{ option.description }}
@@ -61,7 +63,7 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments
 
 {% if command.get('examples') %}
 
-#### Examples
+##### Examples
 
 {% for example in command.examples %}
 _{{ example.description }}_

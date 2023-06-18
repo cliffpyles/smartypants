@@ -50,6 +50,8 @@ Adds support for OpenAI interaction
 
 _Usage:_ `smartypants openai <command> [arguments] [options]`
 
+#### Commands
+
 
 **chat** An interactive session with OpenAI
 
@@ -72,7 +74,7 @@ _Usage:_ `smartypants openai models `
 
 
 
-#### Examples
+##### Examples
 
 
 _List available models in OpenAI_
@@ -102,7 +104,7 @@ _Usage:_ `smartypants openai send  [options]`
 
 
 
-#### Options
+##### Options
 
 
 `attach` : File to include as message
@@ -119,7 +121,7 @@ _Usage:_ `smartypants openai send  [options]`
 
 
 
-#### Examples
+##### Examples
 
 
 _Send one or more messages to OpenAI_
@@ -137,6 +139,8 @@ Adds support for managing plugins
 
 _Usage:_ `smartypants plugins <command> [arguments] [options]`
 
+#### Commands
+
 
 **disable** Disables a plugin
 
@@ -144,7 +148,7 @@ _Usage:_ `smartypants plugins disable  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` (Required): Name of plugin
@@ -155,7 +159,7 @@ _Usage:_ `smartypants plugins disable  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Disable a plugin_
@@ -172,7 +176,7 @@ _Usage:_ `smartypants plugins enable  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` (Required): Name of plugin
@@ -183,7 +187,7 @@ _Usage:_ `smartypants plugins enable  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Enable a plugin_
@@ -200,7 +204,7 @@ _Usage:_ `smartypants plugins install  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` (Required): Name of plugin
@@ -211,7 +215,7 @@ _Usage:_ `smartypants plugins install  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Install a plugin_
@@ -232,7 +236,7 @@ _Usage:_ `smartypants plugins list `
 
 
 
-#### Examples
+##### Examples
 
 
 _List all installed plugins_
@@ -249,7 +253,7 @@ _Usage:_ `smartypants plugins uninstall  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` (Required): Name of plugin
@@ -260,7 +264,7 @@ _Usage:_ `smartypants plugins uninstall  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Uninstall a plugin_
@@ -277,7 +281,7 @@ _Usage:_ `smartypants plugins update  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` : Name of plugin
@@ -288,7 +292,7 @@ _Usage:_ `smartypants plugins update  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Update a plugin_
@@ -305,7 +309,7 @@ _Usage:_ `smartypants plugins status  <arguments>`
 
 
 
-#### Arguments
+##### Arguments
 
 
 `plugin` : Name of plugin
@@ -316,7 +320,7 @@ _Usage:_ `smartypants plugins status  <arguments>`
 
 
 
-#### Examples
+##### Examples
 
 
 _Show status of a plugin_
