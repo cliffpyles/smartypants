@@ -41,23 +41,26 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} <command> [arguments] [options]`
 {% for command in plugin.commands %}
 **{{ command.name }}** {{ command.description }}
 
-_Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
+_Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
 
 {% if command.get('arguments') %}
 
 ##### Arguments
 
 {% for argument in command.arguments %}
-`{{ argument.name }}` {{ "(Required)" if argument.get('required', False) else "" }}: {{ argument.description }}
+`{{ argument.name }}` ({{ argument.type }}) {{ "(Required)" if argument.get('required', False) else "" }} {{ "(Multiple allowed)" if argument.get('allow_multiple', False) else "" }}: {{ argument.description }} 
+_Format:_ `{{ argument.format }}`
 {% endfor %}
 {% endif %}
+
 
 {% if command.get('options') %}
 
 ##### Options
 
 {% for option in command.options %}
-`{{ option.name }}` {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }}: {{ option.description }}
+`{{ option.name }}` ({{ option.type }}) {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }} {{ "(Required)" if option.get('required', False) else "" }} {{ "(Multiple allowed)" if option.get('allow_multiple', False) else "" }}: {{ option.description }} 
+_Format:_ `{{ option.format }}`
 {% endfor %}
 {% endif %}
 

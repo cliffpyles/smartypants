@@ -217,7 +217,6 @@ plugins:
         arguments:
           - name: plugin
             description: Name of plugin
-            required: false
         examples:
           - description: Update a plugin
             command: smartypants plugins update openai
@@ -226,7 +225,7 @@ plugins:
         arguments:
           - name: plugin
             description: Name of plugin
-            required: false
+            required: true
         examples:
           - description: Show status of a plugin
             command: smartypants plugins status openai

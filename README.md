@@ -55,7 +55,8 @@ _Usage:_ `smartypants openai <command> [arguments] [options]`
 
 **chat** An interactive session with OpenAI
 
-_Usage:_ `smartypants openai chat `
+_Usage:_ `smartypants openai chat`
+
 
 
 
@@ -68,7 +69,8 @@ _Usage:_ `smartypants openai chat `
 
 **models** List available models
 
-_Usage:_ `smartypants openai models `
+_Usage:_ `smartypants openai models`
+
 
 
 
@@ -91,7 +93,8 @@ smartypants openai models
 
 **prompts** Preconfigured prompt to use with chats
 
-_Usage:_ `smartypants openai prompts `
+_Usage:_ `smartypants openai prompts`
+
 
 
 
@@ -104,7 +107,8 @@ _Usage:_ `smartypants openai prompts `
 
 **send** Send one or more messages to OpenAI
 
-_Usage:_ `smartypants openai send  [options]`
+_Usage:_ `smartypants openai send [options]`
+
 
 
 
@@ -113,15 +117,20 @@ _Usage:_ `smartypants openai send  [options]`
 ##### Options
 
 
-`attach` : File to include as message
+`attach` (String)   : File to include as message 
+_Format:_ `filepath`
 
-`live` : Stream the response as it is received
+`live` (Boolean)   : Stream the response as it is received 
+_Format:_ ``
 
-`message` : Message to send
+`message` (String)   : Message to send 
+_Format:_ ``
 
-`model` (Default: gpt-3.5-turbo): Language model to use
+`model` (String) (Default: gpt-3.5-turbo)  : Language model to use 
+_Format:_ ``
 
-`raw` : Don't format the response
+`raw` (Boolean)   : Don't format the response 
+_Format:_ ``
 
 
 
@@ -152,14 +161,16 @@ _Usage:_ `smartypants plugins <command> [arguments] [options]`
 
 **disable** Disables a plugin
 
-_Usage:_ `smartypants plugins disable  <arguments>`
+_Usage:_ `smartypants plugins disable <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` (Required): Name of plugin
+`plugin` () (Required) : Name of plugin 
+_Format:_ ``
+
 
 
 
@@ -182,14 +193,16 @@ smartypants plugins disable openai
 
 **enable** Enables a plugin
 
-_Usage:_ `smartypants plugins enable  <arguments>`
+_Usage:_ `smartypants plugins enable <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` (Required): Name of plugin
+`plugin` () (Required) : Name of plugin 
+_Format:_ ``
+
 
 
 
@@ -212,14 +225,16 @@ smartypants plugins enable openai
 
 **install** Installs a plugin
 
-_Usage:_ `smartypants plugins install  <arguments>`
+_Usage:_ `smartypants plugins install <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` (Required): Name of plugin
+`plugin` () (Required) : Name of plugin 
+_Format:_ ``
+
 
 
 
@@ -242,7 +257,8 @@ smartypants plugins install openai
 
 **list** Lists all installed plugins
 
-_Usage:_ `smartypants plugins list `
+_Usage:_ `smartypants plugins list`
+
 
 
 
@@ -265,14 +281,16 @@ smartypants plugins list
 
 **uninstall** Uninstalls a plugin
 
-_Usage:_ `smartypants plugins uninstall  <arguments>`
+_Usage:_ `smartypants plugins uninstall <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` (Required): Name of plugin
+`plugin` () (Required) : Name of plugin 
+_Format:_ ``
+
 
 
 
@@ -295,14 +313,16 @@ smartypants plugins uninstall openai
 
 **update** Updates a plugin
 
-_Usage:_ `smartypants plugins update  <arguments>`
+_Usage:_ `smartypants plugins update <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` : Name of plugin
+`plugin` ()  : Name of plugin 
+_Format:_ ``
+
 
 
 
@@ -325,14 +345,16 @@ smartypants plugins update openai
 
 **status** Shows state of a specific plugin
 
-_Usage:_ `smartypants plugins status  <arguments>`
+_Usage:_ `smartypants plugins status <arguments>`
 
 
 
 ##### Arguments
 
 
-`plugin` : Name of plugin
+`plugin` () (Required) : Name of plugin 
+_Format:_ ``
+
 
 
 
