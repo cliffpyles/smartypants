@@ -10,7 +10,7 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
     
     - [Plugins](#Plugins)
     
-    - [Openai](#OpenAI)
+    - [OpenAI](#OpenAI)
     
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
@@ -176,7 +176,7 @@ smartypants plugins update my_plugin
 
 
 
-### Openai
+### OpenAI
 
 
 `chat` An interactive session with OpenAI

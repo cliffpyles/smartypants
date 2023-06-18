@@ -8,7 +8,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 2. [Usage](#usage)
 3. [Plugins](#plugins)
     {% for plugin in plugins %}
-    - [{{ plugin.name.capitalize() }}](#{{ plugin.name }})
+    - [{{ plugin.name }}](#{{ plugin.name }})
     {% endfor %}
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
@@ -30,7 +30,7 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 ## Plugins
 
 {% for plugin in plugins %}
-### {{ plugin.name.capitalize() }}
+### {{ plugin.name }}
 
 {% for command in plugin.commands %}
 `{{ command.name }}` {{ command.description }}
