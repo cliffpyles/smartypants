@@ -47,7 +47,7 @@ _Usage:_ `smartypants openai <command> [arguments] [options]`
 #### Commands
 
 
-**chat** | An interactive session with OpenAI
+**`chat`** | An interactive session with OpenAI
 
 _Usage:_ `smartypants openai chat`
 
@@ -69,7 +69,7 @@ None
 ---
 
 
-**draw** | Draw an image based on description
+**`draw`** | Draw an image based on description
 
 _Usage:_ `smartypants openai draw <arguments> [options]`
 
@@ -105,7 +105,7 @@ _Allowed Values:_ `256, 512, 1024`
 ---
 
 
-**models** | List available models
+**`models`** | List available models
 
 _Usage:_ `smartypants openai models`
 
@@ -137,7 +137,7 @@ smartypants openai models
 ---
 
 
-**prompts** | Preconfigured prompt to use with chats
+**`prompts`** | Preconfigured prompt to use with chats
 
 _Usage:_ `smartypants openai prompts`
 
@@ -159,7 +159,7 @@ None
 ---
 
 
-**send** | Send one or more messages to OpenAI
+**`send`** | Send one or more messages to OpenAI
 
 _Usage:_ `smartypants openai send [options]`
 
@@ -225,7 +225,7 @@ _Usage:_ `smartypants plugins <command> [arguments] [options]`
 #### Commands
 
 
-**disable** | Disables a plugin
+**`disable`** | Disables a plugin
 
 _Usage:_ `smartypants plugins disable <arguments>`
 
@@ -261,7 +261,7 @@ smartypants plugins disable openai
 ---
 
 
-**enable** | Enables a plugin
+**`enable`** | Enables a plugin
 
 _Usage:_ `smartypants plugins enable <arguments>`
 
@@ -297,7 +297,7 @@ smartypants plugins enable openai
 ---
 
 
-**install** | Installs a plugin
+**`install`** | Installs a plugin
 
 _Usage:_ `smartypants plugins install <arguments>`
 
@@ -333,7 +333,7 @@ smartypants plugins install openai
 ---
 
 
-**list** | Lists all installed plugins
+**`list`** | Lists all installed plugins
 
 _Usage:_ `smartypants plugins list`
 
@@ -365,7 +365,7 @@ smartypants plugins list
 ---
 
 
-**uninstall** | Uninstalls a plugin
+**`uninstall`** | Uninstalls a plugin
 
 _Usage:_ `smartypants plugins uninstall <arguments>`
 
@@ -401,7 +401,7 @@ smartypants plugins uninstall openai
 ---
 
 
-**update** | Updates a plugin
+**`update`** | Updates a plugin
 
 _Usage:_ `smartypants plugins update <arguments>`
 
@@ -437,7 +437,7 @@ smartypants plugins update openai
 ---
 
 
-**status** | Shows state of a specific plugin
+**`status`** | Shows state of a specific plugin
 
 _Usage:_ `smartypants plugins status <arguments>`
 
