@@ -47,9 +47,9 @@ _no requirements specified_
 ### Plugins
 
 
-**Command:** `disable` Disables a plugin
+**disable** Disables a plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins disable  <arguments>`
 
 
 
@@ -74,9 +74,9 @@ smartypants plugins disable openai
 
 
 
-**Command:** `enable` Enables a plugin
+**enable** Enables a plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins enable  <arguments>`
 
 
 
@@ -101,9 +101,9 @@ smartypants plugins enable openai
 
 
 
-**Command:** `install` Installs a plugin
+**install** Installs a plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins install  <arguments>`
 
 
 
@@ -128,9 +128,9 @@ smartypants plugins install openai
 
 
 
-**Command:** `list` Lists all installed plugins
+**list** Lists all installed plugins
 
-**Usage:** `smartypants plugins`
+_Usage:_ `smartypants plugins list `
 
 
 
@@ -148,9 +148,9 @@ smartypants plugins list
 
 
 
-**Command:** `uninstall` Uninstalls a plugin
+**uninstall** Uninstalls a plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins uninstall  <arguments>`
 
 
 
@@ -175,9 +175,9 @@ smartypants plugins uninstall openai
 
 
 
-**Command:** `update` Updates a plugin
+**update** Updates a plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins update  <arguments>`
 
 
 
@@ -202,9 +202,9 @@ smartypants plugins update openai
 
 
 
-**Command:** `status` Shows state of a specific plugin
+**status** Shows state of a specific plugin
 
-**Usage:** `smartypants plugins <arguments>`
+_Usage:_ `smartypants plugins status  <arguments>`
 
 
 
@@ -233,9 +233,9 @@ smartypants plugins status openai
 ### OpenAI
 
 
-**Command:** `chat` An interactive session with OpenAI
+**chat** An interactive session with OpenAI
 
-**Usage:** `smartypants openai`
+_Usage:_ `smartypants openai chat `
 
 
 
@@ -246,9 +246,9 @@ smartypants plugins status openai
 
 
 
-**Command:** `models` List available models
+**models** List available models
 
-**Usage:** `smartypants openai`
+_Usage:_ `smartypants openai models `
 
 
 
@@ -266,9 +266,9 @@ smartypants openai models
 
 
 
-**Command:** `prompts` Preconfigured prompt to use with chats
+**prompts** Preconfigured prompt to use with chats
 
-**Usage:** `smartypants openai`
+_Usage:_ `smartypants openai prompts `
 
 
 
@@ -279,9 +279,9 @@ smartypants openai models
 
 
 
-**Command:** `send` Send one or more messages to OpenAI
+**send** Send one or more messages to OpenAI
 
-**Usage:** `smartypants openai [options]`
+_Usage:_ `smartypants openai send  [options]`
 
 
 

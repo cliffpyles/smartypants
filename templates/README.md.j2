@@ -33,9 +33,9 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 ### {{ plugin.name }}
 
 {% for command in plugin.commands %}
-**Command:** `{{ command.name }}` {{ command.description }}
+**{{ command.name }}** {{ command.description }}
 
-**Usage:** `{{binary_name}} {{plugin.name|lower}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
+_Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}} {{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
 
 {% if command.get('arguments') %}
 
