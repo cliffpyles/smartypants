@@ -63,6 +63,8 @@ _Usage:_ `smartypants openai chat `
 
 
 
+---
+
 
 **models** List available models
 
@@ -84,6 +86,8 @@ smartypants openai models
 
 
 
+---
+
 
 **prompts** Preconfigured prompt to use with chats
 
@@ -94,6 +98,8 @@ _Usage:_ `smartypants openai prompts `
 
 
 
+
+---
 
 
 **send** Send one or more messages to OpenAI
@@ -131,8 +137,9 @@ smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
 
 
 
-
 ---
+
+
 
 ### Plugins
 
@@ -170,6 +177,8 @@ smartypants plugins disable openai
 
 
 
+---
+
 
 **enable** Enables a plugin
 
@@ -197,6 +206,8 @@ smartypants plugins enable openai
 ```
 
 
+
+---
 
 
 **install** Installs a plugin
@@ -226,6 +237,8 @@ smartypants plugins install openai
 
 
 
+---
+
 
 **list** Lists all installed plugins
 
@@ -246,6 +259,8 @@ smartypants plugins list
 ```
 
 
+
+---
 
 
 **uninstall** Uninstalls a plugin
@@ -275,6 +290,8 @@ smartypants plugins uninstall openai
 
 
 
+---
+
 
 **update** Updates a plugin
 
@@ -302,6 +319,8 @@ smartypants plugins update openai
 ```
 
 
+
+---
 
 
 **status** Shows state of a specific plugin
@@ -331,8 +350,9 @@ smartypants plugins status openai
 
 
 
-
 ---
+
+
 
 
 ## Contributor Guidelines
