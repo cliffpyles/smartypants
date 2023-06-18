@@ -32,6 +32,8 @@ Welcome to {{ name }}, a user-friendly CLI tool for interacting with AI services
 {% for plugin in plugins %}
 ### {{ plugin.name }}
 
+_Usage:_ `{{binary_name}} {{plugin.name|lower}} <command> [arguments] [options]`
+
 {% for command in plugin.commands %}
 **{{ command.name }}** {{ command.description }}
 

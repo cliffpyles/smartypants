@@ -5,15 +5,15 @@ aliases: [sp]
 usage: |
   `smartypants <plugin_name> <plugin_command> [arguments] [options]`
 installation: |
-  **Homebrew**
+  Homebrew
 
   `brew install smartypants-cli`
 
-  **NPM**
+  NPM
 
   `npm install -g smartypants-cli`
 
-  **PIP**
+  PIP
 
   `pip install smartpants-cli`
 commands:

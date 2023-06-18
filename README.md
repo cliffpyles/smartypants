@@ -23,15 +23,15 @@ _no requirements specified_
 
 ### Installation
 
-**Homebrew**
+Homebrew
 
 `brew install smartypants-cli`
 
-**NPM**
+NPM
 
 `npm install -g smartypants-cli`
 
-**PIP**
+PIP
 
 `pip install smartpants-cli`
 
@@ -45,6 +45,8 @@ _no requirements specified_
 
 
 ### Plugins
+
+_Usage:_ `smartypants plugins <command> [arguments] [options]`
 
 
 **disable** Disables a plugin
@@ -231,6 +233,8 @@ smartypants plugins status openai
 
 
 ### OpenAI
+
+_Usage:_ `smartypants openai <command> [arguments] [options]`
 
 
 **chat** An interactive session with OpenAI
