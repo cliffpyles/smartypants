@@ -453,4 +453,4 @@ smartypants plugins status openai
 
 | Format  | Definition | Examples |
 | ------------- | ------------- | ------------- |
-| `filepath`  | A valid Mac, Linux, or Windows filepath  | `./some/directory/`, `/some/abosolute/`, `./some/file.txt` |
+| `filepath`  | A valid Mac, Linux, or Windows filepath  | `./some/directory/`, `/home/user/file.txt` |
