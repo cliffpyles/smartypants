@@ -23,6 +23,7 @@ commands:
         description: Displays current version
 plugins:
   - name: OpenAI
+    description: Adds support for OpenAI interaction
     commands:
       - name: chat
         description: An interactive session with OpenAI
@@ -168,6 +169,7 @@ plugins:
           - description: 'Send one or more messages to OpenAI'
             command: "smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'"
   - name: Plugins
+    description: Adds support for managing plugins
     commands:
       - name: disable
         description: Disables a plugin

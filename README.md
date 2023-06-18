@@ -46,6 +46,8 @@ PIP
 
 ### OpenAI
 
+Adds support for OpenAI interaction
+
 _Usage:_ `smartypants openai <command> [arguments] [options]`
 
 
@@ -132,6 +134,8 @@ smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
 
 
 ### Plugins
+
+Adds support for managing plugins
 
 _Usage:_ `smartypants plugins <command> [arguments] [options]`
 
