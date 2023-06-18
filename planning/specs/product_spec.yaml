@@ -1,0 +1,14 @@
+product:
+  name: SmartyPants
+  description: A comprehensive suite of applications and tools designed to enhance interactions with a variety of AI services. This suite extends the functionality of these AI services and brings them all under one roof, providing users with a single point of access for all their AI interaction needs. The product offerings include a command-line interface (CLI), a web application, a mobile application, and a GraphQL API, with plans for further expansion in the future
+  services:
+    unified_ai_service_access: Provides a centralized platform for interacting with a myriad of AI services. Users can leverage different AI capabilities from this unified platform, making it easier to manage and integrate AI into their workflows.
+    multi_platform_access: Offers multiple access points – a CLI for developers and advanced users who prefer a scriptable interface, a web application for easy access on computers, and a mobile application for interactions on-the-go. The GraphQL API allows other applications to seamlessly integrate with our platform.
+    extended_functionality: Extends the core functionality of the AI services it interacts with, adding value and enhancing user experience. Features such as custom commands, plugins, saved preferences, and interaction history are examples of these extended functionalities.
+    secure_access_and_user_accounts: With individual user accounts, users can customize their experience and save preferences. The system offers advanced access control mechanisms, ensuring that user data is well-protected, and users have the final say over who has access to their data.
+  apps:
+    - name: SmartPants CLI
+    - name: SmartPants Web
+    - name: SmartPants Mobile
+  apis:
+    - name: SmartPants API
