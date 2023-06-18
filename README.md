@@ -117,20 +117,29 @@ _Usage:_ `smartypants openai send [options]`
 ##### Options
 
 
-`attach` (String)   : File to include as message 
+`attach` (String)   : File to include as message
+
 _Format:_ `filepath`
 
-`live` (Boolean)   : Stream the response as it is received 
-_Format:_ ``
 
-`message` (String)   : Message to send 
-_Format:_ ``
 
-`model` (String) (Default: gpt-3.5-turbo)  : Language model to use 
-_Format:_ ``
+`live` (Boolean)   : Stream the response as it is received
 
-`raw` (Boolean)   : Don't format the response 
-_Format:_ ``
+
+
+`message` (String)   : Message to send
+
+
+
+`model` (String) (Default: gpt-3.5-turbo)  : Language model to use
+
+
+_Allowed Values:_ `gpt-3.5-turbo, gpt-4, gpt-3.5-turbo-0613, gpt-3.5-turbo-16k, gpt-4-0613`
+
+
+`raw` (Boolean)   : Don't format the response
+
+
 
 
 
@@ -168,8 +177,9 @@ _Usage:_ `smartypants plugins disable <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin 
-_Format:_ ``
+`plugin` () (Required) : Name of plugin
+
+
 
 
 
@@ -200,8 +210,9 @@ _Usage:_ `smartypants plugins enable <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin 
-_Format:_ ``
+`plugin` () (Required) : Name of plugin
+
+
 
 
 
@@ -232,8 +243,9 @@ _Usage:_ `smartypants plugins install <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin 
-_Format:_ ``
+`plugin` () (Required) : Name of plugin
+
+
 
 
 
@@ -288,8 +300,9 @@ _Usage:_ `smartypants plugins uninstall <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin 
-_Format:_ ``
+`plugin` () (Required) : Name of plugin
+
+
 
 
 
@@ -320,8 +333,9 @@ _Usage:_ `smartypants plugins update <arguments>`
 ##### Arguments
 
 
-`plugin` ()  : Name of plugin 
-_Format:_ ``
+`plugin` ()  : Name of plugin
+
+
 
 
 
@@ -352,8 +366,9 @@ _Usage:_ `smartypants plugins status <arguments>`
 ##### Arguments
 
 
-`plugin` () (Required) : Name of plugin 
-_Format:_ ``
+`plugin` () (Required) : Name of plugin
+
+
 
 
 
