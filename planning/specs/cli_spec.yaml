@@ -90,6 +90,26 @@ plugins:
             examples:
               - description: 'Show the chat in OpenAI'
                 example: "smartypants openai chat view --chat_name 'my_chat'"
+      - name: draw
+        description: Draw an image based on description
+        arguments:
+          - name: image_description
+            description: Description of what to draw
+            type: string
+        options:
+          - name: browser
+            description: Opens image in a new browser tab
+            type: boolean
+            default: false
+            flag: true
+          - name: size
+            description: Size of the image in pixels
+            type: integer
+            default: 256
+            allowed:
+              - 256
+              - 512
+              - 1024
       - name: models
         description: List available models
         arguments: []

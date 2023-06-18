@@ -60,7 +60,7 @@ None
 
 {% if command.get('options') %}
 {% for option in command.options %}
-`{{ option.name }}`{% if option.type +%} ({{ option.type }}){% endif %} {{ "(Default: " + option.get('default', '') + ")" if option.get('default', '') else "" }} {{ "(Required)" if option.get('required', False) else "" }} {{ "(Multiple allowed)" if option.get('allow_multiple', False) else "" }}: {{ option.description }}
+`{{ option.name }}`{% if option.type +%} ({{ option.type }}){% endif %} {{ "(Default: " + option.get('default', '') | string + ")" if option.get('default', '') else "" }} {{ "(Required)" if option.get('required', False) else "" }} {{ "(Multiple allowed)" if option.get('allow_multiple', False) else "" }}: {{ option.description }}
 {% if option.format +%}
 _Format:_ {{ option.format }}
 {% endif %}

@@ -69,6 +69,42 @@ None
 ---
 
 
+**draw** Draw an image based on description
+
+_Usage:_ `smartypants openai draw <arguments> [options]`
+
+##### Arguments
+
+
+
+`image_description` (string) : Description of what to draw
+
+
+
+
+
+
+##### Options
+
+
+
+`browser` (boolean)   : Opens image in a new browser tab
+
+
+
+`size` (integer) (Default: 256)  : Size of the image in pixels
+
+
+_Allowed Values:_ `256, 512, 1024`
+
+
+
+
+
+
+---
+
+
 **models** List available models
 
 _Usage:_ `smartypants openai models`
