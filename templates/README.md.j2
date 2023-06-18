@@ -35,7 +35,7 @@ _Usage:_ `{{binary_name}} {{plugin.name|lower}} <command> [arguments] [options]`
 #### Commands
 
 {% for command in plugin.commands %}
-**{{ command.name }}** {{ command.description }}
+**{{ command.name }}** | {{ command.description }}
 
 _Usage:_ `{{binary_name}} {{plugin.name|lower}} {{command.name}}{{ " <arguments>" if command.get('arguments') else "" }}{{ " [options]" if command.get('options') else "" }}`
 
