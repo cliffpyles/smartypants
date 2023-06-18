@@ -15,7 +15,36 @@ type Chat
   id: ID!
   chatName: String
   owner: String
+  messages: [Message] @connection(keyName: "byChat", fields: ["id"])
   access: AccessType @default(value: "private")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  onDelete: AWSLambda @function(name: "ChatTriggerLambda-${env}")
+}
+
+type Message
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete] }
+      { allow: private, operations: [read], provider: iam }
+      {
+        allow: public
+        operations: [read]
+        provider: iam
+        conditions: [{ field: "access", eq: "public" }]
+      }
+    ]
+  )
+  @key(name: "byChat", fields: ["chatID"]) {
+  id: ID!
+  chatID: ID!
+  owner: String
+  access: AccessType @default(value: "private")
+  content: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  onDelete: AWSLambda @function(name: "MessageTriggerLambda-${env}")
 }
 
 type Model
@@ -58,26 +87,6 @@ type Prompt
   access: AccessType @default(value: "private")
 }
 
-type Message
-  @model
-  @auth(
-    rules: [
-      { allow: owner, operations: [create, update, delete] }
-      { allow: private, operations: [read], provider: iam }
-      {
-        allow: public
-        operations: [read]
-        provider: iam
-        conditions: [{ field: "access", eq: "public" }]
-      }
-    ]
-  ) {
-  id: ID!
-  messageText: String
-  owner: String
-  access: AccessType @default(value: "private")
-}
-
 type Plugin
   @model
   @auth(
@@ -96,6 +105,11 @@ type Plugin
   pluginName: String
   owner: String
   access: AccessType @default(value: "private")
+}
+
+enum AccessType {
+  public
+  private
 }
 
 enum AccessType {
