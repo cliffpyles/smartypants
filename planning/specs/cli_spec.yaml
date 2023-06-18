@@ -22,68 +22,6 @@ commands:
       - name: version
         description: Displays current version
 plugins:
-  - name: Plugins
-    commands:
-      - name: disable
-        description: Disables a plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: true
-        examples:
-          - description: Disable a plugin
-            command: smartypants plugins disable openai
-      - name: enable
-        description: Enables a plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: true
-        examples:
-          - description: Enable a plugin
-            command: smartypants plugins enable openai
-      - name: install
-        description: Installs a plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: true
-        examples:
-          - description: Install a plugin
-            command: smartypants plugins install openai
-      - name: list
-        description: Lists all installed plugins
-        examples:
-          - description: List all installed plugins
-            command: smartypants plugins list
-      - name: uninstall
-        description: Uninstalls a plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: true
-        examples:
-          - description: Uninstall a plugin
-            command: smartypants plugins uninstall openai
-      - name: update
-        description: Updates a plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: false
-        examples:
-          - description: Update a plugin
-            command: smartypants plugins update openai
-      - name: status
-        description: Shows state of a specific plugin
-        arguments:
-          - name: plugin
-            description: Name of plugin
-            required: false
-        examples:
-          - description: Show status of a plugin
-            command: smartypants plugins status openai
-
   - name: OpenAI
     commands:
       - name: chat
@@ -229,3 +167,64 @@ plugins:
         examples:
           - description: 'Send one or more messages to OpenAI'
             command: "smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'"
+  - name: Plugins
+    commands:
+      - name: disable
+        description: Disables a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+        examples:
+          - description: Disable a plugin
+            command: smartypants plugins disable openai
+      - name: enable
+        description: Enables a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+        examples:
+          - description: Enable a plugin
+            command: smartypants plugins enable openai
+      - name: install
+        description: Installs a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+        examples:
+          - description: Install a plugin
+            command: smartypants plugins install openai
+      - name: list
+        description: Lists all installed plugins
+        examples:
+          - description: List all installed plugins
+            command: smartypants plugins list
+      - name: uninstall
+        description: Uninstalls a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: true
+        examples:
+          - description: Uninstall a plugin
+            command: smartypants plugins uninstall openai
+      - name: update
+        description: Updates a plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: false
+        examples:
+          - description: Update a plugin
+            command: smartypants plugins update openai
+      - name: status
+        description: Shows state of a specific plugin
+        arguments:
+          - name: plugin
+            description: Name of plugin
+            required: false
+        examples:
+          - description: Show status of a plugin
+            command: smartypants plugins status openai

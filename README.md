@@ -8,9 +8,9 @@ Welcome to SmartyPants, a user-friendly CLI tool for interacting with AI service
 2. [Usage](#usage)
 3. [Plugins](#plugins)
     
-    - [Plugins](#Plugins)
-    
     - [OpenAI](#OpenAI)
+    
+    - [Plugins](#Plugins)
     
 4. [Contributor Guidelines](#contributor-guidelines)
 5. [Licenses and Legal](#licenses-and-legal)
@@ -42,6 +42,93 @@ PIP
 
 
 ## Plugins
+
+
+### OpenAI
+
+_Usage:_ `smartypants openai <command> [arguments] [options]`
+
+
+**chat** An interactive session with OpenAI
+
+_Usage:_ `smartypants openai chat `
+
+
+
+
+
+#### Examples
+
+
+
+
+**models** List available models
+
+_Usage:_ `smartypants openai models `
+
+
+
+
+
+#### Examples
+
+
+
+_List available models in OpenAI_
+```bash
+smartypants openai models
+```
+
+
+
+
+**prompts** Preconfigured prompt to use with chats
+
+_Usage:_ `smartypants openai prompts `
+
+
+
+
+
+#### Examples
+
+
+
+
+**send** Send one or more messages to OpenAI
+
+_Usage:_ `smartypants openai send  [options]`
+
+
+
+
+
+#### Options
+
+
+`attach` : File to include as message
+
+`live` : Stream the response as it is received
+
+`message` : Message to send
+
+`model` (Default: gpt-3.5-turbo): Language model to use
+
+`raw` : Don't format the response
+
+
+
+#### Examples
+
+
+
+_Send one or more messages to OpenAI_
+```bash
+smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
+```
+
+
+
 
 
 ### Plugins
@@ -226,93 +313,6 @@ _Usage:_ `smartypants plugins status  <arguments>`
 _Show status of a plugin_
 ```bash
 smartypants plugins status openai
-```
-
-
-
-
-
-### OpenAI
-
-_Usage:_ `smartypants openai <command> [arguments] [options]`
-
-
-**chat** An interactive session with OpenAI
-
-_Usage:_ `smartypants openai chat `
-
-
-
-
-
-#### Examples
-
-
-
-
-**models** List available models
-
-_Usage:_ `smartypants openai models `
-
-
-
-
-
-#### Examples
-
-
-
-_List available models in OpenAI_
-```bash
-smartypants openai models
-```
-
-
-
-
-**prompts** Preconfigured prompt to use with chats
-
-_Usage:_ `smartypants openai prompts `
-
-
-
-
-
-#### Examples
-
-
-
-
-**send** Send one or more messages to OpenAI
-
-_Usage:_ `smartypants openai send  [options]`
-
-
-
-
-
-#### Options
-
-
-`attach` : File to include as message
-
-`live` : Stream the response as it is received
-
-`message` : Message to send
-
-`model` (Default: gpt-3.5-turbo): Language model to use
-
-`raw` : Don't format the response
-
-
-
-#### Examples
-
-
-
-_Send one or more messages to OpenAI_
-```bash
-smartypants openai send --message 'Hello OpenAI' --model 'gpt-3.5-turbo'
 ```
 
 
