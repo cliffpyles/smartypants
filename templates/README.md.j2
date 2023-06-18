@@ -73,7 +73,7 @@ _{{ example.description }}_
 {% endfor %}
 {% endif %}
 
----
+{{ "---" if not loop.last else "" }}
 
 {% endfor %}
 {% endfor %}
