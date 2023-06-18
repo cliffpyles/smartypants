@@ -453,6 +453,10 @@ smartypants plugins status openai
 
 
 
-## Footnotes
+## References
 
-[^format-filepath]: 
+### Formats
+
+- `filetype`: A valid Mac, Linux, or Windows filepath
+- [test test](## "Just testing the tooltips")
+
